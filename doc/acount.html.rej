@@ -1,0 +1,22 @@
+diff a/doc/acount.html b/doc/acount.html	(rejected hunks)
+@@ -0,0 +1,19 @@
++<html>
++<head lang="ja">
++    <meta charset="windows-31j">
++    <title>���̓t�H�[��</title>
++</head>
++<h1>�����ɓ���</h1>
++
++<form method='post' action='mahiro'>
++    ���[�U�[��<input type='text' name='name'><br>
++    �p�X���[�h<input type='password' name='pass' minlength='8' maxlength='20' size='20'><br>
++    �p�X���[�h(�m�F�p)<input type='password' name='pass' minlength='8' maxlength='20' size='20'><br>
++    �N��<input type='text' name='age'><br>
++    ����<input type='radio' name='sex' value='man'>�j
++        <input type='radio' name='sex' value='woman'>��<br>
++    
++    <input type='submit' value="���M">
++</form>
++
++</html>
+\ No newline at end of file
