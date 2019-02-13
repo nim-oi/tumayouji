@@ -10,9 +10,9 @@
 	
 	<h1>登録されたユーザー</h1>
 	<table border="1">
-		<tr><th>ユーザー名</th><th>パスワード</th></tr>
+		<tr><th>ユーザー名</th><th>パスワード</th><th>パスワード</th><th>パスワード</th><th>パスワード</th></tr>
 		<c:forEach var="prof" items="${users}">
-			<tr><td>${prof.name}</td><td>${prof.pass}</td></tr>
+			<tr><td>${ublist.user_id}</td><td>${ublist.user_name}</td><td>${ublist.user_pass}</td><td>${ublist.user_age}</td><td>${ublist.user_sex}</td></tr>
 		</c:forEach>
 	</table>
 	

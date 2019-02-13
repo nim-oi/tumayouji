@@ -1,28 +1,20 @@
 <web-app>
 <servlet>
-    <servlet-name>kamata</servlet-name>
-    <servlet-class>KamataServlet</servlet-class>
+    <servlet-name>UserServ</servlet-name>
+    <servlet-class>UserServlet</servlet-class>
     </servlet>
 
-    <servlet>
-    <servlet-name>time</servlet-name>
-    <jsp-file>/time.jsp</jsp-file>
-</servlet>
+    <servlet-mapping>
+    <servlet-name>UserServ</servlet-name>
+    <url-pattern>/UserS</url-pattern>
+</servlet-mapping>
 
- <servlet>
+   
+
+<servlet>
     <servlet-name>list</servlet-name>
     <jsp-file>/listoutput.jsp</jsp-file>
-</servlet>
-
-<servlet-mapping>
-    <servlet-name>kamata</servlet-name>
-    <url-pattern>/mahiro</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-    <servlet-name>time</servlet-name>
-    <url-pattern>/time</url-pattern>
-</servlet-mapping>
+    </servlet>
 
     <servlet-mapping>
     <servlet-name>list</servlet-name>
