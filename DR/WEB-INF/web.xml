@@ -1,5 +1,5 @@
 <web-app>
-<servlet>
+<!-- <servlet>
     <servlet-name>UserServ</servlet-name>
     <servlet-class>UserServlet</servlet-class>
     </servlet>
@@ -19,6 +19,27 @@
     <servlet-mapping>
     <servlet-name>list</servlet-name>
     <url-pattern>/list</url-pattern>
+</servlet-mapping> -->
+
+
+<servlet>
+    <servlet-name>ThreadServlet</servlet-name>
+    <servlet-class>ThreadServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+    <servlet-name>ThreadServlet</servlet-name>
+    <url-pattern>/ThreadServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>ResServlet</servlet-name>
+    <servlet-class>ResServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+    <servlet-name>ResServlet</servlet-name>
+    <url-pattern>/ResServlet</url-pattern>
 </servlet-mapping>
 
 </web-app>
