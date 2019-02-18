@@ -21,4 +21,23 @@
     <url-pattern>/list</url-pattern>
 </servlet-mapping>
 
+  <servlet>
+        <servlet-name>ThreadServlet</servlet-name>
+        <servlet-class>ThreadServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ThreadServlet</servlet-name>
+        <url-pattern>/ThreadServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>index</servlet-name>
+        <jsp-file>/index.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>index</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
 </web-app>

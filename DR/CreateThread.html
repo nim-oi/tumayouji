@@ -1,0 +1,25 @@
+<html>
+<head lang="ja">
+    <meta charset="windows-31j">
+    <title>入力フォーム</title>
+</head>
+<h1>ここに入力</h1>
+
+<form method='post' action='ThreadServlet'>
+    スレッドタイトル<input type='text' name='thread_name'><br>
+    大カテゴリー<select name="category">
+        <option value="1">恋愛</option>
+        <option value="2">プログラミング</option>
+        <option value="3">スポーツ</option>
+        <option value="4">ゲーム</option>
+        <option value="5">学校</option>
+        <option value="6">アニメ</option>
+        <option value="7">ニュース</option>
+        <option value="8">その他</option>
+        </select><br>
+    投稿者名<input type='text' name='res_name' placeholder='匿名'><br>
+    投稿内容<textarea name='thread_text' cols='100' rows='10' placeholder='ここに入力'></textarea><br>
+    <input type='submit' value="送信">
+</form>
+
+</html>
