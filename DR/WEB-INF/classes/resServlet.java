@@ -8,13 +8,17 @@ import javax.servlet.RequestDispatcher;
 import java.io.IOException;
 import java.io.PrintWriter;
 /*この中は適宜書き換える。Bean名、
-import info.Profile;
-import database.InsertTest;
-import database.QueryTest;
+import info.ResBean;
+import database.InsertRes;
+import database.QueryRes;
 */
+import info.ResBean;
+import database.InsertRes;
+import database.QueryRes;
+
 import java.util.List;
 
-public class ThreadServlet extends HttpServlet{
+public class ResServlet extends HttpServlet{
 
     public void doPost(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException{
 
@@ -30,27 +34,39 @@ public class ThreadServlet extends HttpServlet{
 
         //これ以降doGetと共通
         //データベースからリストをもらいたい
-        List<Profile> plist = getList();
+        List<ResBean> rlist = getList();
 
         //パラメータをJSPに転送したい。
 
         //jspで受け取る変数の名前ここではusersにplistをset
-        req.setAttribute("users",plist);
+        req.setAttribute("reses",rlist);
         
-        req.setAttribute("res_name",res_name);
-        req.setAttribute("res_text",res_text);
 
         //転送先のJSPを指定
-        RequestDispatcher dispatcher =req.getRequestDispatcher("resList");
+        RequestDispatcher dispatcher =req.getRequestDispatcher("/resList");
 
         //JSPに転送
         dispatcher.forward(req,res);
     }
 
- 
-    public List<Profile> getList(){
+    public void doGet(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException{
+//
+       req.setCharacterEncoding("windows-31J");
+//
 
-        List<Profile> plist=QueryTest.getQueryList();
+        //データベースからリストをもらいたい
+        List<ResBean> rlist = getList();
+        //jspで受け取る変数の名前、ここではusersにplistをset
+        req.setAttribute("reses",rlist);
+        //転送先のJSPを指定
+        RequestDispatcher dis =req.getRequestDispatcher("/resList");
+        //JSPに転送
+        dis.forward(req,res);
+
+    }
+    public List<ResBean> getList(){
+
+        List<ResBean> rlist=QueryRes.getQueryList();
 
         return plist;
     }
