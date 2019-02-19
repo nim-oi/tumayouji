@@ -33,7 +33,7 @@ public class ServletdoGet extends HttpServlet{
 	
 		return db;
 }
-
+}
 
 
 
