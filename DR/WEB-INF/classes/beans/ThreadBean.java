@@ -1,4 +1,4 @@
-package Bean;
+package beans;
 
 public class ThreadBean{
     private String thread_name;
