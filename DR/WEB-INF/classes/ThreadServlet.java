@@ -1,72 +1,34 @@
+import java.io.IOException;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import javax.servlet.ServletException;
 import javax.servlet.RequestDispatcher;
-
-import java.io.IOException;
-import java.io.PrintWriter;
-/*この中は適宜書き換える。Bean名、
-import info.Profile;
-import database.InsertTest;
-import database.QueryTest;
-*/
-import java.util.List;
+import Bean.ThreadBean;
+import database.InsertThread;
 
 public class ThreadServlet extends HttpServlet{
-
     public void doPost(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException{
+        req.setCharacterEncoding("windows-31j");
 
-        req.setCharacterEncoding("windows-31J");
-        
-        /*request元のinputタグ内のname属性を引数に書く*/
-        
         String thread_name = req.getParameter("thread_name");
-        String thread_name = req.getParameter("thread_name");
-        String thread_name = req.getParameter("thread_name");
-        String thread_name = req.getParameter("thread_name");
-        String thread_name = req.getParameter("thread_name");
-        
+        String category = req.getParameter("category");
+        String res_name = req.getParameter("res_name");
+        String thread_text = req.getParameter("thread_text");
 
-        //データベースに書き込むクラスメソッド
-        InsertTest.insertUser_Table(name,pass);
+        InsertThread.thread_table(thread_name,category,res_name,thread_text);
 
-        //これ以降doGetと共通
-        //データベースからリストをもらいたい
-        List<Profile> plist = getList();
+        ThreadBean tb = new ThreadBean();
+        tb.setThreadNmae(thread_name);
+        tb.setCategory(category);
+        tb.setResName(res_name);
+        tb.setResText(thread_text);
 
-        //パラメータをJSPに転送したい。
 
-        //jspで受け取る変数の名前ここではusersにplistをset
-        req.setAttribute("users",plist);
+        req.setAttribute("tb",tb);
 
-        //転送先のJSPを指定
-        RequestDispatcher dis =req.getRequestDispatcher("/list");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("index");
 
-        //JSPに転送
-        dis.forward(req,res);
-    }
 
-    public void doGet(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException{
-//
-//        req.setCharacterEncoding("windows-31J");
-//
-
-        //データベースからリストをもらいたい
-        List<Profile> plist = getList();
-        //jspで受け取る変数の名前、ここではusersにplistをset
-        req.setAttribute("users",plist);
-        //転送先のJSPを指定
-        RequestDispatcher dis =req.getRequestDispatcher("/list");
-        //JSPに転送
-        dis.forward(req,res);
-
-    }
-    public List<Profile> getList(){
-
-        List<Profile> plist=QueryTest.getQueryList();
-
-        return plist;
     }
 }
