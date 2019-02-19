@@ -8,7 +8,7 @@
     <servlet-name>UserServ</servlet-name>
     <url-pattern>/UserS</url-pattern>
 </servlet-mapping>
-
+ -->
    
 
 <servlet>
@@ -19,7 +19,7 @@
     <servlet-mapping>
     <servlet-name>list</servlet-name>
     <url-pattern>/list</url-pattern>
-</servlet-mapping> -->
+</servlet-mapping>
 
 
 <servlet>
@@ -42,15 +42,7 @@
     <url-pattern>/ResServlet</url-pattern>
 </servlet-mapping>
 
-  <servlet>
-        <servlet-name>ThreadServlet</servlet-name>
-        <servlet-class>ThreadServlet</servlet-class>
-    </servlet>
 
-    <servlet-mapping>
-        <servlet-name>ThreadServlet</servlet-name>
-        <url-pattern>/ThreadServlet</url-pattern>
-    </servlet-mapping>
 
     <servlet>
         <servlet-name>index</servlet-name>
