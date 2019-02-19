@@ -55,7 +55,7 @@ public class ResServlet extends HttpServlet{
 //
 
         //データベースからリストをもらいたい
-        List<ResBean> rlist = getList();
+        List<ResBean> rlist = getList(currentThread);
         //jspで受け取る変数の名前、ここではusersにplistをset
         req.setAttribute("reses",rlist);
         //転送先のJSPを指定
@@ -64,9 +64,9 @@ public class ResServlet extends HttpServlet{
         dis.forward(req,res);
 
     }
-    public List<ResBean> getList(){
+    public List<ResBean> getList(String currentThread){
 
-        List<ResBean> rlist=QueryRes.getQueryList();
+        List<ResBean> rlist=QueryRes.getQueryList(currentThread);
 
         return plist;
     }
