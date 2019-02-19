@@ -23,7 +23,7 @@ public class QueryThread{
 		}
 	}*///‚±‚±‚Í•K—v‚È‚µ
 	
-	public static List<ThreadBean> getQueryList(){
+	public static List<ThreadBean> getQueryList(String currentCategory){
 		
 		List<ThreadBean> userList = new ArrayList<ThreadBean>();
 	
@@ -35,7 +35,6 @@ public class QueryThread{
 			Connection cn=
 				DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","yuje","0131");
 			System.out.println("Ú‘±Š®—¹");
-			String currentCategory=;//•Û—¯’†
 			
 			//select•¶
 			String sql="select thread_name, thread_date from thread_table 
