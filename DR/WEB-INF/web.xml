@@ -8,7 +8,7 @@
     <servlet-name>UserServ</servlet-name>
     <url-pattern>/UserS</url-pattern>
 </servlet-mapping>
-
+ -->
    
 
 <servlet>
@@ -19,7 +19,7 @@
     <servlet-mapping>
     <servlet-name>list</servlet-name>
     <url-pattern>/list</url-pattern>
-</servlet-mapping> -->
+</servlet-mapping>
 
 
 <servlet>
