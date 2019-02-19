@@ -11,6 +11,7 @@ import database.QueryThread;
 import java.util.List;
 
 public class ServletdoGet extends HttpServlet{
+	
 	public void doGet(HttpServletRequest req, HttpServletResponse res)
 	throws IOException, ServletException{
 		
