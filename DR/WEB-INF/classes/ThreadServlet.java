@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.RequestDispatcher;
 import Bean.ThreadBean;
 import database.InsertThread;
+import database.QueryThread;
+import java.util.List;
 
 public class ThreadServlet extends HttpServlet{
     public void doPost(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException{
@@ -29,6 +31,29 @@ public class ThreadServlet extends HttpServlet{
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("index");
 
-
+        dis.foward(req, res);
     }
+    public void doGet(HttpServletRequest req, HttpServletResponse res)
+	throws IOException, ServletException{
+		
+		//データベースからリストをもらいたい
+		List<ThreadBean> tb=getList();
+		
+		//パラメータをJSPに転送したい場合
+		req.setAttribute("tb", tb);
+		
+		//転送先のJSPを指定
+		RequestDispatcher dis=req.getRequestDispatcher("index");//書き直しあり
+		
+		//JSPに転送
+		dis.foward(req, res);
+    }
+
+	public List<ThreadBean> getList(){
+		List<ThreadBean> db=QueryThread.getQueryList();
+	
+		return db;
+    }
+
+
 }

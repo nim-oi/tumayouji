@@ -6,11 +6,11 @@ public class ThreadBean{
     private String res_name;
     private String thread_text;
 
-    public void setThreadNmae(String thread_name){
+    public void setThreadName(String thread_name){
         this.thread_name = thread_name;
     }
 
-    public String getThread_name(){
+    public String getThreadName(){
         return thread_name;
     }
 
