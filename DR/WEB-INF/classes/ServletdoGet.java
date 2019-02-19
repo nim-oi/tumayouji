@@ -15,21 +15,25 @@ public class ServletdoGet extends HttpServlet{
 	public void doGet(HttpServletRequest req, HttpServletResponse res)
 	throws IOException, ServletException{
 		
+		req.setCharacterEncoding("Windows-31J");
+		
+		String currentCategory=req.getParameter("category");
+		
 		//データベースからリストをもらいたい
-		List<ThreadBean> db=getList();
+		List<ThreadBean> db=getList(currentCategory);
 		
 		//パラメータをJSPに転送したい場合
-		req.setAttribute("threads", db);
+		req.setAttribute("tb", db);
 		
 		//転送先のJSPを指定
-		RequestDispatcher dis=req.getRequestDispatcher("/list");//書き直しあり
+		RequestDispatcher dis=req.getRequestDispatcher("/index");//書き直しあり
 		
 		//JSPに転送
 		dis.foward(req, res);
 }
 
-	public List<ThreadBean> getList(){
-		List<ThreadBean> db=QueryThread.getQueryList();
+	public List<ThreadBean> getList(String currentCategory){
+		List<ThreadBean> db=QueryThread.getQueryList(currentCategory);
 	
 		return db;
 }
