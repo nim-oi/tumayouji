@@ -23,7 +23,7 @@ public class QueryThread{
 		}
 	}*///ここは必要なし
 	
-	public static List<ThreadBean> getQueryList(){
+	public static List<ThreadBean> getQueryList(String currentCategory){
 		
 		List<ThreadBean> userList = new ArrayList<ThreadBean>();
 	
@@ -35,10 +35,9 @@ public class QueryThread{
 			Connection cn=
 				DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","yuje","0131");
 			System.out.println("接続完了");
-			String currentCategory=;//保留中
 			
 			//select文
-			String sql="select thread_name, thread_date from thread_table 
+			String sql="select thread_name, thread_date, thread_id from thread_table 
 			where category_id = '"+currentCategory+"';";
 
 			//Statementインターフェイスを実装するクラスをインスタンス化する
@@ -55,8 +54,10 @@ public class QueryThread{
 				
 				String thread_name = rs.getString(1);	//1列目のデータを取得
 				String thread_date = rs.getString(2);	//2列目のデータを取得
+				String thread_id = rs.getString(3);		//3列目のデータを取得
 				tb.setThread_name(thread_name);
 				tb.setThread_date(thread_date);
+				tb.setThread_id(thread_id);
 				
 				userList.add(tb);
 				
