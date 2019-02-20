@@ -53,4 +53,14 @@
         <servlet-name>index</servlet-name>
         <url-pattern>/index</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ResPage</servlet-name>
+        <jsp-file>/ResPage.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ResPage</servlet-name>
+        <url-pattern>/ResPage</url-pattern>
+    </servlet-mapping>
 </web-app>
