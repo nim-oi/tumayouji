@@ -20,7 +20,7 @@ public class InsertThread{
 
             System.out.println("Ú‘±Š®—¹");
 
-            String sql="insert into thread_table(thread_id,category,thread_name,res_name,thread_text) values('+ s_thread_id.nextval+','"+category+"','"+thread_name+"','"+res_name+"','"+thread_text+"')";
+            String sql="insert into thread_table(thread_id,category,thread_name,res_name,thread_text) values('+ s_thread_id.nextval+','"+category+"','"+threadname+"','"+resname+"','"+threadtext+"')";
 
             Statement st=cn.createStatement();
 
