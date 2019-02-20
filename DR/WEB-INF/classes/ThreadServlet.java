@@ -20,14 +20,21 @@ public class ThreadServlet extends HttpServlet{
 
         InsertThread.thread_table(threadname,category,resname,threadtext);
 
-        ThreadBean tb = new ThreadBean();
-        tb.setThreadname(threadname);
-        tb.setCategory(category);
-        tb.setResname(resname);
-        tb.setThreadtext(threadtext);
+//        ThreadBean tb = new ThreadBean();
+//        tb.setThreadname(threadname);
+//        tb.setCategory(category);
+//        tb.setResname(resname);
+//        tb.setThreadtext(threadtext);
+//
+//
+//        req.setAttribute("tb",tb);
+
+        String currentCategory=req.getParameter("category");
 
 
-        req.setAttribute("tb",tb);
+        List<ThreadBean> db=getList(currentCategory);
+
+        req.setAttribute("tb", db);
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("/index");
 
