@@ -26,7 +26,7 @@ public class ServletdoGet extends HttpServlet{
 		req.setAttribute("tb", db);
 		
 		//“]‘—æ‚ÌJSP‚ğw’è
-		RequestDispatcher dis=req.getRequestDispatcher("/index");
+		RequestDispatcher dis=req.getRequestDispatcher("/index");//‘‚«’¼‚µ‚ ‚è
 		
 		//JSP‚É“]‘—
 		dis.forward(req, res);
