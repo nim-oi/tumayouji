@@ -54,9 +54,9 @@ public class QueryThread{
 				String thread_name = rs.getString(1);	//1????f?[?^???ï
 				String thread_date = rs.getString(2);	//2????f?[?^???ï
 				String thread_id = rs.getString(3);		//3????f?[?^???ï
-				tb.setThread_name(thread_name);
-				tb.setThread_date(thread_date);
-				tb.setThread_id(thread_id);
+				tb.setThreadName(thread_name);
+				tb.setThreadDate(thread_date);
+				tb.setThreadId(thread_id);
 				
 				userList.add(tb);
 				
