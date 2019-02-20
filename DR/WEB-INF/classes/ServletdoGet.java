@@ -29,7 +29,7 @@ public class ServletdoGet extends HttpServlet{
 		RequestDispatcher dis=req.getRequestDispatcher("/index");
 		
 		//JSP‚É“]‘—
-		dis.foward(req, res);
+		dis.forward(req, res);
 }
 
 	public List<ThreadBean> getList(String currentCategory){
