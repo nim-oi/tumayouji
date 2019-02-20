@@ -14,14 +14,14 @@ public class QueryThread{
 	/*public static void main(String[] args){
 		
 		List<ThreadBean> al = getQueryList();
-		System.out.println("username      password"); //???o??
+		System.out.println("username      password"); //見出し
 
 		for(int i = 0; i < al.size();i++){
 			ThreadBean tb = al.get(i);
 			System.out.println(tb.getName()+"\t"+tb.getPass());
 		
 		}
-	}*///??????K?v???
+	}*///ここは必要なし
 	
 	public static List<ThreadBean> getQueryList(String currentCategory){
 		
@@ -31,50 +31,50 @@ public class QueryThread{
 		try{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
-			//Oracle????????
+			//Oracleに接続する
 			Connection cn=
 				DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","yuje","0131");
-			System.out.println("???????");
+			System.out.println("接続完了");
 			
-			//select??
+			//select文
 			String sql="select thread_name, thread_date, thread_id from thread_table where category_id = '"+currentCategory+"';";
 
-			//Statement?C???^?[?t?F?C?X??????????N???X???C???X?^???X??????
+			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st=cn.createStatement();
 
-			//select???????s??
-			//ResultSet?C???^?[?t?F?C?X???????????N???X??
-			//?C???X?^???X?????
+			//select文を実行し
+			//ResultSetインターフェイスを実装したクラスの
+			//インスタンスが返る
 			ResultSet rs=st.executeQuery(sql);
 
-			//?J?[?\??????s?????X?N???[?????A?f?[?^???t?F?b?`????
+			//カーソルを一行だけスクロールし、データをフェッチする
 			while(rs.next()){
 				ThreadBean tb = new ThreadBean();
 				
-				String threadname = rs.getString(1);	//1????f?[?^???擾
-				String threaddate = rs.getString(2);	//2????f?[?^???擾
-				String threadid = rs.getString(3);		//3????f?[?^???擾
+				String threadname = rs.getString(1);	//1列目のデータを取得
+				String threaddate = rs.getString(2);	//2列目のデータを取得
+				String threadid = rs.getString(3);		//3列目のデータを取得
 				tb.setThreadname(threadname);
 				tb.setThreaddate(threaddate);
 				tb.setThreadid(threadid);
 				
 				userList.add(tb);
 				
-				//System.out.println("username"+"\t"+"password"); //?m?F?\??
-				//System.out.println(name+"\t"+pass);				//?m?F????Q
+				//System.out.println("username"+"\t"+"password"); //確認表示
+				//System.out.println(name+"\t"+pass);				//確認その２
 			}
 
 			
-			//Oracle?????f????
+			//Oracleから切断する
 			cn.close();
 
-			System.out.println("??f????");
+			System.out.println("切断完了");
 		}catch(ClassNotFoundException e){
 			e.printStackTrace();
-			System.out.println("?N???X???????????B");
+			System.out.println("クラスがないみたい。");
 		}catch(SQLException e){
 			e.printStackTrace();
-			System.out.println("SQL??A???O??????B");
+			System.out.println("SQL関連の例外みたい。");
 		}catch(Exception e){
 			e.printStackTrace();
 		}
