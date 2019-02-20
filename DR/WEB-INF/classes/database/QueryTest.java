@@ -14,7 +14,7 @@ public class QueryTest{
 	public static void main(String[] args){
 		
 		List<Profile> al = getQueryList();
-		System.out.println("username      password"); //見出し
+		System.out.println("username      password"); //???o??
 
 		for(int i = 0; i < al.size();i++){
 			Profile prof = al.get(i);
@@ -33,48 +33,48 @@ public class QueryTest{
 		try{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
-			//Oracleに接続する
+			//Oracle????????
 			Connection cn=
 				DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","tuser","pass");
-			System.out.println("接続完了");
+			System.out.println("???????");
 			
-			//select文
+			//select??
 			String sql="select username, password from user_table";
 
-			//Statementインターフェイスを実装するクラスをインスタンス化する
+			//Statement?C???^?[?t?F?C?X??????????N???X???C???X?^???X??????
 			Statement st=cn.createStatement();
 
-			//select文を実行し
-			//ResultSetインターフェイスを実装したクラスの
-			//インスタンスが返る
+			//select???????s??
+			//ResultSet?C???^?[?t?F?C?X???????????N???X??
+			//?C???X?^???X?????
 			ResultSet rs=st.executeQuery(sql);
 
-			//カーソルを一行だけスクロールし、データをフェッチする
+			//?J?[?\??????s?????X?N???[?????A?f?[?^???t?F?b?`????
 			while(rs.next()){
 				Profile prof = new Profile();
 				
-				String name = rs.getString(1);	//1列目のデータを取得
-				String pass = rs.getString(2);	//2列目のデータを取得
+				String name = rs.getString(1);	//1????f?[?^???擾
+				String pass = rs.getString(2);	//2????f?[?^???擾
 				prof.setName(name);
 				prof.setPass(pass);
 				
 				userList.add(prof);
 				
-				//System.out.println("username"+"\t"+"password"); //確認表示
-				//System.out.println(name+"\t"+pass);				//確認その２
+				//System.out.println("username"+"\t"+"password"); //?m?F?\??
+				//System.out.println(name+"\t"+pass);				//?m?F????Q
 			}
 
 			
-			//Oracleから切断する
+			//Oracle?????f????
 			cn.close();
 
-			System.out.println("切断完了");
+			System.out.println("??f????");
 		}catch(ClassNotFoundException e){
 			e.printStackTrace();
-			System.out.println("クラスがないみたい。");
+			System.out.println("?N???X???????????B");
 		}catch(SQLException e){
 			e.printStackTrace();
-			System.out.println("SQL関連の例外みたい。");
+			System.out.println("SQL??A???O??????B");
 		}catch(Exception e){
 			e.printStackTrace();
 		}

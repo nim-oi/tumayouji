@@ -6,6 +6,7 @@ public class ThreadBean{
     private String resname;
     private String threadtext;
     private String threadid;
+    private String threaddate;
 
     public void setThreadname(String threadname){
         this.threadname = threadname;
@@ -45,6 +46,14 @@ public class ThreadBean{
 
     public String getThreadid(){
         return threadid;
+    }
+
+    public void setThreaddate(String threaddate){
+        this.threaddate = threaddate;
+    }
+
+    public String getThreaddate(){
+        return threaddate;
     }
 
 }

@@ -4,8 +4,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.RequestDispatcher;
-import Bean.ThreadBean;
+import beans.ThreadBean;
 import database.InsertThread;
+import database.QueryThread;
+import java.util.*;
 
 public class ThreadServlet extends HttpServlet{
     public void doPost(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException{
@@ -19,15 +21,15 @@ public class ThreadServlet extends HttpServlet{
         InsertThread.thread_table(threadname,category,resname,threadtext);
 
         ThreadBean tb = new ThreadBean();
-        tb.setThreadNmae(threadname);
+        tb.setThreadname(threadname);
         tb.setCategory(category);
-        tb.setResName(resname);
-        tb.setResText(threadtext);
+        tb.setResname(resname);
+        tb.setThreadtext(threadtext);
 
 
         req.setAttribute("tb",tb);
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("index");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/index");
 
         dispatcher.forward(req,res);
 
@@ -44,7 +46,7 @@ public class ThreadServlet extends HttpServlet{
 
         req.setAttribute("tb", db);
 
-        RequestDispatcher dispatcher=req.getRequestDispatcher("/index");//������������
+        RequestDispatcher dispatcher=req.getRequestDispatcher("/index");//????????????
 
         dispatcher.forward(req, res);
     }

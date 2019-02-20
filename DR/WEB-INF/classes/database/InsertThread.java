@@ -9,7 +9,7 @@ public class InsertThread{
         InsertThread.thread_table(args[0],args[1],args[2],args[3]);
     }
 
-    public static int thread_table(String thread_name,String category,String res_name,String thread_text){
+    public static int thread_table(String threadname,String category,String resname,String threadtext){
         int count = 0;
         try{
             Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -34,7 +34,7 @@ public class InsertThread{
 
             cn.close();
 
-            System.out.println("Ø’fŠ®—¹");
+            System.out.println("ˆ—‚ªI—¹‚µ‚Ü‚µ‚½");
 
         }catch(ClassNotFoundException e){
             e.printStackTrace();
