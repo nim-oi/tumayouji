@@ -1,17 +1,18 @@
 package beans;
 
 public class ThreadBean{
-    private String thread_name;
+    private String threadname;
     private String category;
-    private String res_name;
-    private String thread_text;
+    private String resname;
+    private String threadtext;
+    private String threadid;
 
-    public void setThreadNmae(String thread_name){
-        this.thread_name = thread_name;
+    public void setThreadname(String threadname){
+        this.threadname = threadname;
     }
 
-    public String getThread_name(){
-        return thread_name;
+    public String getThreadname(){
+        return threadname;
     }
 
     public void setCategory(String category){
@@ -22,19 +23,28 @@ public class ThreadBean{
         return category;
     }
 
-    public void setResName(String res_name){
-        this.res_name = res_name;
+    public void setResname(String resname){
+        this.resname = resname;
     }
 
-    public String getResName(){
-        return res_name;
+    public String getResname(){
+        return resname;
     }
 
-    public void setResText(String thread_text){
-        this.thread_text = thread_text;
+    public void setThreadtext(String threadtext){
+        this.threadtext = threadtext;
     }
 
-    public String getResText(){
-        return thread_text;
+    public String getThreadtext(){
+        return threadtext;
     }
+
+    public void setThreadid(String threadid){
+        this.threadid = threadid;
+    }
+
+    public String getThreadid(){
+        return threadid;
+    }
+
 }
