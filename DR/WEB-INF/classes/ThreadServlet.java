@@ -4,7 +4,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.RequestDispatcher;
-import Bean.ThreadBean;
+import beans.ThreadBean;
 import database.InsertThread;
 import database.QueryThread;
 import java.util.List;
@@ -21,10 +21,10 @@ public class ThreadServlet extends HttpServlet{
         InsertThread.thread_table(thread_name,category,res_name,thread_text);
 
         ThreadBean tb = new ThreadBean();
-        tb.setThreadNmae(thread_name);
+        tb.setThreadName(thread_name);
         tb.setCategory(category);
         tb.setResName(res_name);
-        tb.setResText(thread_text);
+        tb.setThreadtext(thread_text);
 
 
         req.setAttribute("tb",tb);

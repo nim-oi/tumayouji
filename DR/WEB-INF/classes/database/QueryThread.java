@@ -37,8 +37,7 @@ public class QueryThread{
 			System.out.println("接続完了");
 			
 			//select文
-			String sql="select thread_name, thread_date, thread_id from thread_table 
-			where category_id = '"+currentCategory+"';";
+			String sql="select thread_name, thread_date, thread_id from thread_table where category_id = '"+currentCategory+"';";
 
 			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st=cn.createStatement();
@@ -55,9 +54,9 @@ public class QueryThread{
 				String thread_name = rs.getString(1);	//1列目のデータを取得
 				String thread_date = rs.getString(2);	//2列目のデータを取得
 				String thread_id = rs.getString(3);		//3列目のデータを取得
-				tb.setThread_name(thread_name);
-				tb.setThread_date(thread_date);
-				tb.setThread_id(thread_id);
+				tb.setThreadname(thread_name);
+				tb.setThreaddate(thread_date);
+				tb.setThreadid(thread_id);
 				
 				userList.add(tb);
 				
