@@ -51,12 +51,12 @@ public class QueryThread{
 			while(rs.next()){
 				ThreadBean tb = new ThreadBean();
 				
-				String thread_name = rs.getString(1);	//1????f?[?^???ï
-				String thread_date = rs.getString(2);	//2????f?[?^???ï
-				String thread_id = rs.getString(3);		//3????f?[?^???ï
-				tb.setThreadName(thread_name);
-				tb.setThreadDate(thread_date);
-				tb.setThreadId(thread_id);
+				String threadname = rs.getString(1);	//1????f?[?^???ï
+				String threaddate = rs.getString(2);	//2????f?[?^???ï
+				String threadid = rs.getString(3);		//3????f?[?^???ï
+				tb.setThreadname(threadname);
+				tb.setThreaddate(threaddate);
+				tb.setThreadid(threadid);
 				
 				userList.add(tb);
 				
