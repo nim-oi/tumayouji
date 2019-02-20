@@ -1,37 +1,37 @@
 package beans;
 
 public class ResBean{
-	private int resid;
-    private int threadid;
+	private String resid;
+    private String threadid;
     private String restext;
     private String resname;
-    private int resgood;
+    private String resgood;
     private String resdate;
-    private int resnumber;
-	private int reply;
+    private String resnumber;
+	private String reply;
 
 	 /**
      * @param resid the resid to set
      */
-    public void setResid(int resid) {
+    public void setResid(String resid) {
         this.resid = resid;
     }
     /**
      * @return the resid
      */
-    public int getResId() {
+    public String getResId() {
         return resid;
     }
     /**
      * @param threadid the threadid to set
      */
-    public void setThreadid(int threadid) {
+    public void setThreadid(String threadid) {
         this.threadid = threadid;
     }
     /**
      * @return the threadid
      */
-    public int getThreadid() {
+    public String getThreadid() {
         return threadid;
     }
     /**
@@ -61,13 +61,13 @@ public class ResBean{
     /**
      * @param resgood the resgood to set
      */
-    public void setResgood(int resgood) {
+    public void setResgood(String resgood) {
         this.resgood = resgood;
     }
     /**
      * @return the resgood
      */
-    public int getResgood() {
+    public String getResgood() {
         return resgood;
     }
     /**
@@ -85,25 +85,25 @@ public class ResBean{
     /**
      * @param resnumber the resnumber to set
      */
-    public void setResnumber(int resnumber) {
+    public void setResnumber(String resnumber) {
         this.resnumber = resnumber;
     }
     /**
      * @return the resnumber
      */
-    public int getResnumber() {
+    public String getResnumber() {
         return resnumber;
     }
     /**
      * @param reply the reply to set
      */
-    public void setReply(int reply) {
+    public void setReply(String reply) {
         this.reply = reply;
     }
     /**
      * @return the reply
      */
-    public int getReply() {
+    public String getReply() {
         return reply;
     }
 

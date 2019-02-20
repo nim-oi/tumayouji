@@ -17,7 +17,7 @@ public class QueryRes{
 	
 	public static List<ResBean> getQueryList(String currentThread){
 		
-		List<ResBean> ResList = new ArrayList<ResBean>();
+		List<ResBean> resList = new ArrayList<ResBean>();
 	
 	
 		try{
@@ -30,7 +30,7 @@ public class QueryRes{
 			System.out.println("接続完了");
 			
 			//select文、変わる部分
-			String sql="select restext,resname,resdate,resnumber from res_table";
+			String sql="select restext,resname,resdate,resnumber from res_table where threadid="+currentThread;
 
 			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st=cn.createStatement();
@@ -54,7 +54,7 @@ public class QueryRes{
                 ublist.setResnumber(resnumber);//変わる部分
 				
 				
-				userList.add(ublist);
+				resList.add(ublist);
 				
 			}
 
@@ -72,7 +72,7 @@ public class QueryRes{
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		return userList;
+		return resList;
 		
 	}
 }
