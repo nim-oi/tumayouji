@@ -11,24 +11,47 @@ public class ThreadServlet extends HttpServlet{
     public void doPost(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException{
         req.setCharacterEncoding("windows-31j");
 
-        String thread_name = req.getParameter("thread_name");
+        String threadname = req.getParameter("thread_name");
         String category = req.getParameter("category");
-        String res_name = req.getParameter("res_name");
-        String thread_text = req.getParameter("thread_text");
+        String resname = req.getParameter("res_name");
+        String threadtext = req.getParameter("thread_text");
 
-        InsertThread.thread_table(thread_name,category,res_name,thread_text);
+        InsertThread.thread_table(threadname,category,resname,threadtext);
 
         ThreadBean tb = new ThreadBean();
-        tb.setThreadNmae(thread_name);
+        tb.setThreadNmae(threadname);
         tb.setCategory(category);
-        tb.setResName(res_name);
-        tb.setResText(thread_text);
+        tb.setResName(resname);
+        tb.setResText(threadtext);
 
 
         req.setAttribute("tb",tb);
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("index");
 
+        dispatcher.forward(req,res);
 
+    }
+    public void doGet(HttpServletRequest req, HttpServletResponse res)
+            throws IOException, ServletException{
+
+        req.setCharacterEncoding("Windows-31J");
+
+        String currentCategory=req.getParameter("category");
+
+
+        List<ThreadBean> db=getList(currentCategory);
+
+        req.setAttribute("tb", db);
+
+        RequestDispatcher dispatcher=req.getRequestDispatcher("/index");//������������
+
+        dispatcher.forward(req, res);
+    }
+
+    public List<ThreadBean> getList(String currentCategory){
+        List<ThreadBean> db=QueryThread.getQueryList(currentCategory);
+
+        return db;
     }
 }
