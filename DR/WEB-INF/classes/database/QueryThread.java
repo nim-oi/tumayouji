@@ -23,7 +23,7 @@ public class QueryThread{
 		}
 	}*///ここは必要なし
 	
-	public static List<ThreadBean> getQueryList(String currentCategory){
+	public static List<ThreadBean> getQueryList(){
 		
 		List<ThreadBean> userList = new ArrayList<ThreadBean>();
 	
@@ -37,8 +37,8 @@ public class QueryThread{
 			System.out.println("接続完了");
 			
 			//select文
-			String sql="select thread_name, thread_date, thread_id from thread_table where category_id = '"+currentCategory+"';";
-
+			String sql="select thread_name, thread_date, thread_id from threadtable";
+			System.out.println(sql);
 			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st=cn.createStatement();
 

@@ -3,7 +3,7 @@ package beans;
 public class ThreadBean{
     private String threadname;
     private String category;
-    private String resname;
+    private String username;
     private String threadtext;
     private String threadid;
     private String threaddate;
@@ -24,12 +24,12 @@ public class ThreadBean{
         return category;
     }
 
-    public void setResname(String resname){
-        this.resname = resname;
+    public void setUsername(String username){
+        this.username = username;
     }
 
-    public String getResname(){
-        return resname;
+    public String getUsername(){
+        return username;
     }
 
     public void setThreadtext(String threadtext){

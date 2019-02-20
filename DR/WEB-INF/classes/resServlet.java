@@ -7,12 +7,7 @@ import javax.servlet.RequestDispatcher;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-/*‚±‚Ì’†‚Í“K‹X‘‚«Š·‚¦‚éBBean–¼A
-import info.ResBean;
-import database.InsertRes;
-import database.QueryRes;
-*/
-import info.ResBean;
+import beans.ResBean;
 import database.InsertRes;
 import database.QueryRes;
 
@@ -24,28 +19,28 @@ public class ResServlet extends HttpServlet{
 
         req.setCharacterEncoding("windows-31J");
         
-        /*requestŒ³‚Ìinputƒ^ƒO“à‚Ìname‘®«‚ğˆø”‚É‘‚­*/
+        /*requestï¿½ï¿½ï¿½ï¿½inputï¿½^ï¿½Oï¿½ï¿½ï¿½ï¿½nameï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éï¿½ï¿½ï¿½*/
         
         String resname = req.getParameter("resname");
         String restext = req.getParameter("restext");
 
-        //ƒf[ƒ^ƒx[ƒX‚É‘‚«‚ŞƒNƒ‰ƒXƒƒ\ƒbƒh
+        //ï¿½fï¿½[ï¿½^ï¿½xï¿½[ï¿½Xï¿½Éï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ŞƒNï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½\ï¿½bï¿½h
         InsertTest.insertUser_Table(name,pass);
 
-        //‚±‚êˆÈ~doGet‚Æ‹¤’Ê
-        //ƒf[ƒ^ƒx[ƒX‚©‚çƒŠƒXƒg‚ğ‚à‚ç‚¢‚½‚¢
+        //ï¿½ï¿½ï¿½ï¿½È~doGetï¿½Æ‹ï¿½ï¿½ï¿½
+        //ï¿½fï¿½[ï¿½^ï¿½xï¿½[ï¿½Xï¿½ï¿½ï¿½çƒŠï¿½Xï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ç‚¢ï¿½ï¿½ï¿½ï¿½
         List<ResBean> rlist = getList();
 
-        //ƒpƒ‰ƒ[ƒ^‚ğJSP‚É“]‘—‚µ‚½‚¢B
+        //ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½JSPï¿½É“]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½B
 
-        //jsp‚Åó‚¯æ‚é•Ï”‚Ì–¼‘O‚±‚±‚Å‚Íusers‚Éplist‚ğset
+        //jspï¿½Åó‚¯ï¿½ï¿½Ïï¿½ï¿½Ì–ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½Å‚ï¿½usersï¿½ï¿½plistï¿½ï¿½set
         req.setAttribute("reses",rlist);
         
 
-        //“]‘—æ‚ÌJSP‚ğw’è
+        //ï¿½]ï¿½ï¿½ï¿½ï¿½ï¿½JSPï¿½ï¿½ï¿½wï¿½ï¿½
         RequestDispatcher dispatcher =req.getRequestDispatcher("/resList");
 
-        //JSP‚É“]‘—
+        //JSPï¿½É“]ï¿½ï¿½
         dispatcher.forward(req,res);
     }
 
@@ -54,13 +49,13 @@ public class ResServlet extends HttpServlet{
        req.setCharacterEncoding("windows-31J");
 //
 
-        //ƒf[ƒ^ƒx[ƒX‚©‚çƒŠƒXƒg‚ğ‚à‚ç‚¢‚½‚¢
+        //ï¿½fï¿½[ï¿½^ï¿½xï¿½[ï¿½Xï¿½ï¿½ï¿½çƒŠï¿½Xï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ç‚¢ï¿½ï¿½ï¿½ï¿½
         List<ResBean> rlist = getList(currentThread);
-        //jsp‚Åó‚¯æ‚é•Ï”‚Ì–¼‘OA‚±‚±‚Å‚Íusers‚Éplist‚ğset
+        //jspï¿½Åó‚¯ï¿½ï¿½Ïï¿½ï¿½Ì–ï¿½ï¿½Oï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½Å‚ï¿½usersï¿½ï¿½plistï¿½ï¿½set
         req.setAttribute("reses",rlist);
-        //“]‘—æ‚ÌJSP‚ğw’è
+        //ï¿½]ï¿½ï¿½ï¿½ï¿½ï¿½JSPï¿½ï¿½ï¿½wï¿½ï¿½
         RequestDispatcher dis =req.getRequestDispatcher("/resList");
-        //JSP‚É“]‘—
+        //JSPï¿½É“]ï¿½ï¿½
         dis.forward(req,res);
 
     }

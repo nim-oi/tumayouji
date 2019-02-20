@@ -5,11 +5,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class InsertThread{
-    public static void main(String[] args){
-        InsertThread.thread_table(args[0],args[1],args[2],args[3]);
-    }
 
-    public static int thread_table(String threadname,String category,String resname,String threadtext){
+    public static int thread_table(String threadname,String category,String username,String threadtext){
         int count = 0;
         try{
             Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -20,8 +17,8 @@ public class InsertThread{
 
             System.out.println("ê⁄ë±äÆóπ");
 
-            String sql="insert into thread_table(thread_id,category,thread_name,res_name,thread_text) values('+ s_thread_id.nextval+','"+category+"','"+threadname+"','"+resname+"','"+threadtext+"')";
-
+            String sql="insert into threadtable(thread_id,category,thread_name,user_name,thread_text) values(s_thread_id.nextval,'"+category+"','"+threadname+"','"+username+"','"+threadtext+"')";
+            System.out.println(sql);
             Statement st=cn.createStatement();
 
             count=st.executeUpdate(sql);

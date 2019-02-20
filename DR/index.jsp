@@ -10,8 +10,9 @@
 <table border="1">
     <tr><th>スレッドタイトル</th><th>日付</th><th>カテゴリー</th><th>ユーザー名</th><th>スレッド内容</th></tr>
     <c:forEach var="t" items="${tb}">
-        <tr><td>${t.threadname}</td><td>${t.threaddate}</td><td>${t.category}</td><td>${t.resname}</td><td>${t.thread_text}</td></tr>
+        <tr><td><a href="/ResServlet?threadid=1">${t.threadname}</a></td><td>${t.threaddate}</td><td>${t.category}</td><td>${t.username}</td><td></td></tr>
     </c:forEach>
+    <p><a href="CreateThread.html">yuje</a></p>
 </table>
 </body>
 </html>
