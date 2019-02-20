@@ -26,8 +26,8 @@ public class ResServlet extends HttpServlet{
         
         /*request元のinputタグ内のname属性を引数に書く*/
         
-        String res_name = req.getParameter("res_name");
-        String res_text = req.getParameter("res_text");
+        String resname = req.getParameter("resname");
+        String restext = req.getParameter("restext");
 
         //データベースに書き込むクラスメソッド
         InsertTest.insertUser_Table(name,pass);
@@ -55,7 +55,7 @@ public class ResServlet extends HttpServlet{
 //
 
         //データベースからリストをもらいたい
-        List<ResBean> rlist = getList();
+        List<ResBean> rlist = getList(currentThread);
         //jspで受け取る変数の名前、ここではusersにplistをset
         req.setAttribute("reses",rlist);
         //転送先のJSPを指定
@@ -64,9 +64,9 @@ public class ResServlet extends HttpServlet{
         dis.forward(req,res);
 
     }
-    public List<ResBean> getList(){
+    public List<ResBean> getList(String currentThread){
 
-        List<ResBean> rlist=QueryRes.getQueryList();
+        List<ResBean> rlist=QueryRes.getQueryList(currentThread);
 
         return plist;
     }
