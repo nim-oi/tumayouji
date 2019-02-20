@@ -44,14 +44,14 @@ public class QueryRes{
 			while(rs.next()){
 				ResBean ublist = new ResBean();
 				
-                String res_text=rs.getString(1);
-                String res_name=rs.getString(2);
-                String res_date=rs.getString(3);
-                String res_number=rs.getString(4);
-                ublist.setResText(res_text);//•Ï‚í‚é•”•ª
-                ublist.setResName(res_name);//•Ï‚í‚é•”•ª
-                ublist.setResDate(res_date);//•Ï‚í‚é•”•ª
-                ublist.setResNumber(res_number);//•Ï‚í‚é•”•ª
+                String restext=rs.getString(1);
+                String resname=rs.getString(2);
+                String resdate=rs.getString(3);
+                String resnumber=rs.getString(4);
+                ublist.setRestext(restext);//•Ï‚í‚é•”•ª
+                ublist.setResname(resname);//•Ï‚í‚é•”•ª
+                ublist.setResdate(resdate);//•Ï‚í‚é•”•ª
+                ublist.setResnumber(resnumber);//•Ï‚í‚é•”•ª
 				
 				
 				userList.add(ublist);
