@@ -2,8 +2,6 @@
 	contentType="text/html;charset=Windows-31J" %>
 
 <%--JSTL 1.1.2 core タグライブラリ--%>
-<%@ taglib prefix="c" url="http://java.sun.com/jsp/jstl/core" %>
-
 <html>
 <head><title>登録されたユーザー</title></head>
 <body>

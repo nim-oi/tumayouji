@@ -12,7 +12,7 @@ public class InsertRes{
 		//InsertTest.insertRes_Table(args[0],args[1]);
 	}
 	
-	public static int insertRes_Table(String res_name,String res_text){
+	public static int insertResTable(String resname,String restext){
 		int count = 0; //処理した行数を入れるための変数
 		try{
 			//Driverインターフェイスを実装するクラスをロードする
@@ -30,7 +30,7 @@ public class InsertRes{
 			System.out.println("接続完了");
 			int thread_id=
 			//SQL文を変数に格納する
-			String sql="insert into res_table(res_name,res_text,thread_id) values('"+res_name+"','"+res_text+"','+thread_id+')";
+			String sql="insert into res_table(resname,restext,threadid) values('"+resname+"','"+restext+"','+threadid+')";
 			
 			//Statementインターフェイスを実装するクラスの
 			//インスタンスを取得する
