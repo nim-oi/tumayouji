@@ -1,6 +1,6 @@
 <%@ page pageEncoding="windows-31j"
          contentType="text/html;charset=windows-31j" %>
-<%@ taglib prefix="c" url="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>top‰æ–Ê</title>
