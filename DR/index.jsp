@@ -1,13 +1,16 @@
 <%@ page pageEncoding="windows-31j"
          contentType="text/html;charset=windows-31j" %>
+<%@ taglib prefix="c" url="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>top画面</title>
 </head>
 <body>
-    <table>
-        <tr><th>スレッドタイトル</th><th>名前</th><th>スレッドテキスト</th></tr>
-        <tr><th>${tb.thread_name}</th><th>${tb.category}</th><th>${tb.thread_text}</th></tr>
-    </table>
+<table border="1">
+    <tr><th>ユーザー名</th><th>パスワード</th><th>パスワード</th><th>パスワード</th><th>パスワード</th></tr>
+    <c:forEach var="tb" items="${tb}">
+        <tr><td>${tb.threadname}</td><td>${tb.threaddate}</td><td>${tb.category}</td><td>${tb.resname}</td><td>${tb.thread_text}</td></tr>
+    </c:forEach>
+</table>
 </body>
 </html>
