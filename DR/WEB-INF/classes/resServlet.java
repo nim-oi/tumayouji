@@ -26,8 +26,8 @@ public class ResServlet extends HttpServlet{
         
         /*request元のinputタグ内のname属性を引数に書く*/
         
-        String res_name = req.getParameter("res_name");
-        String res_text = req.getParameter("res_text");
+        String resname = req.getParameter("resname");
+        String restext = req.getParameter("restext");
 
         //データベースに書き込むクラスメソッド
         InsertTest.insertUser_Table(name,pass);

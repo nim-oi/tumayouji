@@ -1,98 +1,98 @@
 package beans;
 
 public class ResBean{
-	private int res_id;
-    private int thread_id;
-    private String res_text;
-    private String res_name;
-    private int res_good;
-    private String res_date;
-    private int res_number;
+	private int resid;
+    private int threadid;
+    private String restext;
+    private String resname;
+    private int resgood;
+    private String resdate;
+    private int resnumber;
 	private int reply;
 
 	 /**
-     * @param thread_id the res_id to set
+     * @param resid the resid to set
      */
-    public void setResId(int res_id) {
-        this.res_id = res_id;
+    public void setResid(int resid) {
+        this.resid = resid;
     }
     /**
-     * @return the res_id
+     * @return the resid
      */
     public int getResId() {
-        return res_id;
+        return resid;
     }
     /**
-     * @param thread_id the thread_id to set
+     * @param threadid the threadid to set
      */
-    public void setThreadId(int thread_id) {
-        this.thread_id = thread_id;
+    public void setThreadid(int threadid) {
+        this.threadid = threadid;
     }
     /**
-     * @return the thread_id
+     * @return the threadid
      */
-    public int getThreadId() {
-        return thread_id;
+    public int getThreadid() {
+        return threadid;
     }
     /**
-     * @param thread_name the res_text to set
+     * @param restext the restext to set
      */
-    public void setResText(String res_text) {
-        this.res_text = res_text;
+    public void setRestext(String restext) {
+        this.restext = restext;
     }
     /**
-     * @return the res_text
+     * @return the restext
      */
-    public String getResText() {
-        return res_text;
+    public String getRestext() {
+        return restext;
     }
     /**
-     * @param res_name the res_name to set
+     * @param resname the resname to set
      */
-    public void setResName(String res_name) {
-        this.res_name = res_name;
+    public void setResname(String resname) {
+        this.resname = resname;
     }
     /**
      * @return the thread_date
      */
-    public String getResName() {
-        return res_name;
+    public String getResname() {
+        return resname;
     }
     /**
-     * @param res_good the res_good to set
+     * @param resgood the resgood to set
      */
-    public void setResGood(int res_good) {
-        this.res_good = res_good;
+    public void setResgood(int resgood) {
+        this.resgood = resgood;
     }
     /**
-     * @return the res_good
+     * @return the resgood
      */
-    public int getResGood() {
-        return res_good;
+    public int getResgood() {
+        return resgood;
     }
     /**
      * @param res_date the res_date to set
      */
-    public void setResDate(String res_date) {
-        this.res_date = res_date;
+    public void setResdate(String resdate) {
+        this.resdate = resdate;
     }
     /**
-     * @return the res_date
+     * @return the resdate
      */
-    public int getResDate() {
-        return res_date;
+    public String getResdate() {
+        return resdate;
     }
     /**
-     * @param res_number the res_number to set
+     * @param resnumber the resnumber to set
      */
-    public void setResNumber(int res_number) {
-        this.res_number = res_number;
+    public void setResnumber(int resnumber) {
+        this.resnumber = resnumber;
     }
     /**
-     * @return the res_number
+     * @return the resnumber
      */
-    public int getResNumber() {
-        return res_number;
+    public int getResnumber() {
+        return resnumber;
     }
     /**
      * @param reply the reply to set
