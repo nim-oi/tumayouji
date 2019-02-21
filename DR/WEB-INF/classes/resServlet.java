@@ -68,6 +68,6 @@ public class ResServlet extends HttpServlet{
 
         List<ResBean> rlist=QueryRes.getQueryList(currentThread);
 
-        return plist;
+        return rlist;
     }
 }
