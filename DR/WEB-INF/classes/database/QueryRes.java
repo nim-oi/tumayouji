@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class QueryRes{
 
 	
-	public static List<ResBean> getQueryList(String currentThread){
+	public static List<ResBean> getQueryList(int currentThread){
 		
 		List<ResBean> resList = new ArrayList<ResBean>();
 	
@@ -30,7 +30,7 @@ public class QueryRes{
 			System.out.println("接続完了");
 			
 			//select文、変わる部分
-			String sql="select restext,resname,resdate,resnumber from res_table where threadid="+currentThread;
+			String sql="select restext,resname,resdate,resnumber,threadid from res_table where threadid="+currentThread;
 
 			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st=cn.createStatement();
@@ -47,12 +47,13 @@ public class QueryRes{
                 String restext=rs.getString(1);
                 String resname=rs.getString(2);
                 String resdate=rs.getString(3);
-                String resnumber=rs.getString(4);
+				String resnumber=rs.getString(4);
+				String threadid=rs.getString(5);
                 ublist.setRestext(restext);//変わる部分
                 ublist.setResname(resname);//変わる部分
                 ublist.setResdate(resdate);//変わる部分
                 ublist.setResnumber(resnumber);//変わる部分
-				
+				ublist.setThreadid(threadid);
 				
 				resList.add(ublist);
 				

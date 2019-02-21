@@ -34,7 +34,7 @@ public class ResServlet extends HttpServlet{
 
         //これ以降doGetと共通
         //データベースからリストをもらいたい
-        List<ResBean> rlist = getList();
+        List<ResBean> rlist = getList(threadid);
 
         //パラメータをJSPに転送したい。
 
@@ -53,7 +53,7 @@ public class ResServlet extends HttpServlet{
 //
        req.setCharacterEncoding("windows-31J");
 //
-        String currentThread=req.getParameter("category");
+        int currentThread= Integer.parseInt(req.getParameter("threadid"));   
         //データベースからリストをもらいたい
         List<ResBean> rlist = getList(currentThread);
         //jspで受け取る変数の名前、ここではusersにplistをset
@@ -64,7 +64,7 @@ public class ResServlet extends HttpServlet{
         dis.forward(req,res);
 
     }
-    public List<ResBean> getList(String currentThread){
+    public List<ResBean> getList(int currentThread){
 
         List<ResBean> rlist=QueryRes.getQueryList(currentThread);
 
