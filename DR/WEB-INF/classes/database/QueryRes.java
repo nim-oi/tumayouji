@@ -31,7 +31,7 @@ public class QueryRes{
 			
 			//select文、変わる部分
 			String sql="select restext,resname,resdate,resnumber,threadid from res_table where threadid="+currentThread;
-
+			System.out.println(sql);
 			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st=cn.createStatement();
 
