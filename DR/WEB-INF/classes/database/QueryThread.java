@@ -37,7 +37,7 @@ public class QueryThread{
 			System.out.println("接続完了");
 			
 			//select文
-			String sql="select thread_name, thread_date, thread_id,thread_text,user_name,category from threadtable order by thread_id asc";
+			String sql="select thread_name, thread_date, thread_id,thread_text,user_name,category from threadtable order by thread_id desc";
 			System.out.println(sql);
 			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st=cn.createStatement();
@@ -56,14 +56,15 @@ public class QueryThread{
 				String threadid = rs.getString(3);		//3列目のデータを取得
 				String threadtext = rs.getString(4);	//4列目のデータを取得
 				String username = rs.getString(5);		//5列目のデータを取得
-				String category = rs.getString(5);		//6列目のデータを取得
-				tb.setThreadtext(category);
-				tb.setThreadtext(username);
+				String category = rs.getString(6);		//6列目のデータを取得
+				tb.setCategory(category);
+				tb.setUsername(username);
 				tb.setThreadtext(threadtext);
 				tb.setThreadname(threadname);
 				tb.setThreaddate(threaddate);
 				tb.setThreadid(threadid);
-				
+				System.out.println(username);
+				System.out.println(category);
 				userList.add(tb);
 				
 				//System.out.println("username"+"\t"+"password"); //確認表示

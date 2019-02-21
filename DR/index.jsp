@@ -23,7 +23,41 @@
 <table border="1">
     <tr><th>番号</th><th>スレッドタイトル</th><th>日付</th><th>カテゴリー</th><th>ユーザー名</th><th>スレッド内容</th></tr>
     <c:forEach var="t" items="${tb}">
-        <tr><td>${t.threadid}</td><td><a href="/ResServlet?threadid=1">${t.threadname}</a></td><td>${t.threaddate}</td><td>${t.category}</td><td>${t.username}</td><td>${t.threadtext}</td></tr>
+        <tr><td>${t.threadid}</td><td><a href="/ResServlet?threadid=1">${t.threadname}</a></td><td>${t.threaddate}</td><td>
+                <script>
+                    var a ="恋愛";
+                    var b ="プログラミング";
+                    var c ="スポーツ";
+                    var d ="ゲーム";
+                    var e ="学校";
+                    var f ="アニメ";
+                    var g ="ニュース";
+                    var h ="その他";
+                    if(${t.category} == 1){
+                        document.write(a);
+                    }else if(${t.category} == 2){
+                        document.write(b);
+                    }
+                    else if(${t.category} == 3){
+                        document.write(c);
+                    }
+                    else if(${t.category} == 4){
+                        document.write(d);
+                    }
+                    else if(${t.category} == 5){
+                        document.write(e);
+                    }
+                    else if(${t.category} == 6){
+                        document.write(f);
+                    }
+                    else if(${t.category} == 7){
+                        document.write(g);
+                    }
+                    else if(${t.category} == 8){
+                        document.write(h);
+                    }
+                </script>
+                </td><td>${t.username}</td><td>${t.threadtext}</td></tr>
     </c:forEach>
 
 </table>
