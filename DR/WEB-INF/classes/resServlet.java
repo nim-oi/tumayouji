@@ -59,9 +59,9 @@ public class ResServlet extends HttpServlet{
         //jsp‚Åó‚¯æ‚é•Ï”‚Ì–¼‘OA‚±‚±‚Å‚Íusers‚Éplist‚ğset
         req.setAttribute("rb",rlist);
         //“]‘—æ‚ÌJSP‚ğw’è
-        RequestDispatcher dis =req.getRequestDispatcher("/ResPage");
+        RequestDispatcher dispatcher =req.getRequestDispatcher("/ResPage");
         //JSP‚É“]‘—
-        dis.forward(req,res);
+        dispatcher.forward(req,res);
 
     }
     public List<ResBean> getList(int currentThread){
