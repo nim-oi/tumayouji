@@ -23,9 +23,9 @@ public class ResServlet extends HttpServlet{
     public void doPost(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException{
 
         req.setCharacterEncoding("windows-31J");
-        
+
         /*request元のinputタグ内のname属性を引数に書く*/
-        
+
         String resname = req.getParameter("resname");
         String restext = req.getParameter("restext");
         int threadid= Integer.parseInt(req.getParameter("threadid"));
@@ -40,7 +40,7 @@ public class ResServlet extends HttpServlet{
 
         //jspで受け取る変数の名前ここではusersにplistをset
         req.setAttribute("rb",rlist);
-        
+
 
         //転送先のJSPを指定
         RequestDispatcher dispatcher =req.getRequestDispatcher("/ResPage");
@@ -51,9 +51,9 @@ public class ResServlet extends HttpServlet{
 
     public void doGet(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException{
 //
-       req.setCharacterEncoding("windows-31J");
+        req.setCharacterEncoding("windows-31J");
 //
-        int currentThread= Integer.parseInt(req.getParameter("threadid"));   
+        int currentThread= Integer.parseInt(req.getParameter("threadid"));
         //データベースからリストをもらいたい
         List<ResBean> rlist = getList(currentThread);
         //jspで受け取る変数の名前、ここではusersにplistをset
