@@ -30,6 +30,18 @@ public class ResServlet extends HttpServlet{
         String restext = req.getParameter("restext");
         String threadid= req.getParameter("threadid");
         //データベースに書き込むクラスメソッド
+
+        if (restext != null) {
+            //改行コードをHTMLの改行タグ（<br>）に変換
+            restext = restext.replaceAll("\r\n", "<br>");
+        }
+
+        restext = restext.replace("&", "&amp;");
+        restext = restext.replace("\"", "&quot;");
+        restext = restext.replace("<", "&lt;");
+        restext = restext.replace(">", "&gt;");
+        restext = restext.replace("'", "&#39;");
+
         InsertRes.insertResTable(resname,restext,threadid);
 
         //これ以降doGetと共通

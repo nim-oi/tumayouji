@@ -66,6 +66,6 @@
 
     <error-page>
         <exception-type>javax.servlet.ServletException</exception-type>
-        <location>ResServletError.jsp</location>
+        <location>/ResServletError.jsp</location>
     </error-page>
 </web-app>

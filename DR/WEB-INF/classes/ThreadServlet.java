@@ -27,7 +27,7 @@ public class ThreadServlet extends HttpServlet{
         threadtext = threadtext.replace("<", "&lt;");
         threadtext = threadtext.replace(">", "&gt;");
         threadtext = threadtext.replace("'", "&#39;");
-    
+
 
         InsertThread.thread_table(threadname,category,username,threadtext);
 
