@@ -17,17 +17,18 @@ public class ThreadServlet extends HttpServlet{
         String category = req.getParameter("category");
         String username = req.getParameter("user_name");
         String threadtext = req.getParameter("thread_text");
-    	
-    	if (threadtext != null) {
-        //改行コードをHTMLの改行タグ（<br>）に変換
-        threadtext = threadtext.replaceAll("\r\n", "<br>");
-    	}
+
+
         threadtext = threadtext.replace("&", "&amp;");
         threadtext = threadtext.replace("\"", "&quot;");
         threadtext = threadtext.replace("<", "&lt;");
         threadtext = threadtext.replace(">", "&gt;");
         threadtext = threadtext.replace("'", "&#39;");
 
+        if (threadtext != null) {
+            //改行コードをHTMLの改行タグ（<br>）に変換
+            threadtext = threadtext.replaceAll("\r\n", "<br>");
+        }
 
         InsertThread.thread_table(threadname,category,username,threadtext);
 

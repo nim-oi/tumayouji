@@ -31,16 +31,16 @@ public class ResServlet extends HttpServlet{
         String threadid= req.getParameter("threadid");
         //データベースに書き込むクラスメソッド
 
-        if (restext != null) {
-            //改行コードをHTMLの改行タグ（<br>）に変換
-            restext = restext.replaceAll("\r\n", "<br>");
-        }
-
         restext = restext.replace("&", "&amp;");
         restext = restext.replace("\"", "&quot;");
         restext = restext.replace("<", "&lt;");
         restext = restext.replace(">", "&gt;");
         restext = restext.replace("'", "&#39;");
+
+        if (restext != null) {
+            //改行コードをHTMLの改行タグ（<br>）に変換
+            restext = restext.replaceAll("\r\n", "<br>");
+        }
 
         InsertRes.insertResTable(resname,restext,threadid);
 
