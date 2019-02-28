@@ -30,6 +30,9 @@ public class ResServlet extends HttpServlet{
         String restext = req.getParameter("restext");
         String threadid= req.getParameter("threadid");
         //データベースに書き込むクラスメソッド
+        if(threadid==null||threadid.isEmpty()){
+            throw new ServletException("投稿できません");
+        }
 
         restext = restext.replace("&", "&amp;");
         restext = restext.replace("\"", "&quot;");
@@ -67,7 +70,7 @@ public class ResServlet extends HttpServlet{
         req.setCharacterEncoding("windows-31J");
 //
         String threadid= req.getParameter("threadid");
-        if(threadid==null){
+        if(threadid==null||threadid.isEmpty()){
             throw new ServletException("このページは表示できません");
         }
         //データベースからリストをもらいたい
