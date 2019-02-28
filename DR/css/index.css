@@ -68,3 +68,9 @@ text{
 .btn-circle-flat:hover {
 	background: #668ad8;
 }
+
+.error{
+	width:100%;
+	text-align: center;
+	padding-top: 27%;
+}
