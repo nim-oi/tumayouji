@@ -61,7 +61,7 @@
                         document.write(h);
                     }
                 </script></td><td>${t.username}</td></tr>
-                <tr><td>${t.threadtext}</td></tr>
+                <tr><td colspan="5">${t.threadtext}</td></tr>
     </c:forEach>
 
 </table>
