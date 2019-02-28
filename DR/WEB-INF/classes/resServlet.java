@@ -13,7 +13,9 @@ import database.InsertRes;
 import database.QueryRes;
 */
 import beans.ResBean;
+import beans.ThreadBean;
 import database.InsertRes;
+import database.QueryThread;
 import database.QueryRes;
 
 import java.util.*;
@@ -50,11 +52,11 @@ public class ResServlet extends HttpServlet{
         //これ以降doGetと共通
         //データベースからリストをもらいたい
         List<ResBean> rlist = getList(threadid);
-
+        ThreadBean tb=QueryThread.getQueryCurrentThread(threadid);
         //パラメータをJSPに転送したい。
 
         //jspで受け取る変数の名前ここではusersにplistをset
-        req.setAttribute("thread_id",threadid);
+        req.setAttribute("tb",tb);
         req.setAttribute("rb",rlist);
 
 
@@ -75,8 +77,11 @@ public class ResServlet extends HttpServlet{
         }
         //データベースからリストをもらいたい
         List<ResBean> rlist = getList(threadid);
+        ThreadBean tb=QueryThread.getQueryCurrentThread(threadid);
+        
+        
         //jspで受け取る変数の名前、ここではusersにplistをset
-        req.setAttribute("thread_id",threadid);
+        req.setAttribute("tb",tb);
         req.setAttribute("rb",rlist);
         //転送先のJSPを指定
         RequestDispatcher dispatcher =req.getRequestDispatcher("/ResPage");
