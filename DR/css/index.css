@@ -53,7 +53,7 @@ tr{
 
 
 
-.aaa{
+.aaa {
 	background-color: white;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
@@ -61,37 +61,42 @@ tr{
 	border-bottom-left-radius: 5px;
 	width:45%;
 	list-style: none;
-	border: 1px solid #000000;
+	border: 1px solid #999999;
 	margin:  5px auto;
 }
-
+.table a{
+	text-decoration: none;
+}
 .threadname{
+	padding-left: 10px;
+	color: black;
+}
+.threadname{
+	padding-left: 10px;
 	font-size:20px;
 }
 .threadtext{
+	padding-left: 10px;
 	font-size:13px;
+	color: #999999;
+}
+.card_detail{
+	padding-left: 10px;
 }
 .username{
 	font-size: 10px;
+	color:black;
+
 }
 .threaddate{
 	font-size: 10px;
+	color: black;
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.category{
+	font-size: 10px;
+	color: black;
+}
 
 .title{
 	font-size:20px;
@@ -124,3 +129,10 @@ text{
 	text-align: center;
 	padding-top: 27%;
 }
+
+.create{
+	padding-top:100px;
+	margin: 0px auto;
+}
+
+

@@ -4,12 +4,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>top画面</title>
+    <title>yuje channel</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
 <div class="header">
-    <h1><a href="index.jsp">YUJE CHANNEL</a></h1>
+    <h1><a href="ThreadServlet">YUJE CHANNEL</a></h1>
 <ul class="li">
     <li><a href="ThreadServlet?category=1">恋愛</a></li>
     <li><a href="ThreadServlet?category=2">プログラミング</a></li>
@@ -25,8 +25,9 @@
 
 <div class="table">
     <c:forEach var="t" items="${tb}">
-        <li class="aaa">
-            <div class="threadname"><a href="ResServlet?threadid=${t.threadid}">${t.threadname}</a></div>
+            <li class="aaa">
+                <a href="ResServlet?threadid=${t.threadid}">
+            <div class="threadname">${t.threadname}</div>
             <p class="threadtext">${t.threadtext}</p>
             <div class="card_detail">
             <span class="category"><script>
@@ -62,15 +63,16 @@
                         document.write(h);
                     }
                 </script></span>
-                <span class="username">${t.username}</span>
+                <span class="username">作成者:${t.username}</span>
                 <!--             <span class="res_num res_balloon" title="レス数"></span> -->
                 <!-- <span class="hit_num" title="HIT数">371HIT</span> -->
-                <time class="threaddate">${t.threaddate}</time>
+                <time class="threaddate">日付:${t.threaddate}</time>
             </div>
-        </li>
+
+                </a>
+            </li>
     </c:forEach>
 </div>
 <a href="CreateThread.html" class="btn-circle-flat">スレッドを作成</a>
-<p><a href="CreateThread.html">yuje</a></p>
 </body>
 </html>
