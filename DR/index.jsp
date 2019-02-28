@@ -25,9 +25,8 @@
 
 <div class="table">
 <table border="1">
-    <tr><th>番号</th><th>スレッドタイトル</th><th>日付</th><th>カテゴリー</th><th>ユーザー名</th></tr>
     <c:forEach var="t" items="${tb}">
-        <tr><td>${t.threadid}</td><td><a href="/ResServlet?threadid=${t.threadid}">${t.threadname}</a></td><td>${t.threaddate}</td><td>
+        <tr><td>${t.threadid}</td><td>${t.threaddate}</td><td>
                 <script>
                     var a ="恋愛";
                     var b ="プログラミング";
@@ -61,7 +60,8 @@
                         document.write(h);
                     }
                 </script></td><td>${t.username}</td></tr>
-                <tr><td colspan="5">${t.threadtext}</td></tr>
+                <tr><td  colspan="4"><a href="/ResServlet?threadid=${t.threadid}">タイトル${t.threadname}</a></td></tr>
+                <tr><td colspan="4">${t.threadtext}</td></tr>
     </c:forEach>
 
 </table>
