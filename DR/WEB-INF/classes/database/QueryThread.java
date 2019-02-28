@@ -59,6 +59,10 @@ public class QueryThread{
 				String category = rs.getString(6);		//6列目のデータを取得
 				tb.setCategory(category);
 				tb.setUsername(username);
+				if(threadtext.length()>100){
+					threadtext=threadtext.substring(0,100);
+					threadtext=threadtext.concat("…");
+				}
 				tb.setThreadtext(threadtext);
 				tb.setThreadname(threadname);
 				threaddate=threaddate.substring(0,16);
@@ -125,6 +129,10 @@ public class QueryThread{
 				String category = rs.getString(6);		//6列目のデータを取得
 				tb.setCategory(category);
 				tb.setUsername(username);
+				if(threadtext.length()>100){
+					threadtext=threadtext.substring(0,100);
+					threadtext=threadtext.concat("…");
+				}
 				tb.setThreadtext(threadtext);
 				tb.setThreadname(threadname);
 				threaddate=threaddate.substring(0,16);
