@@ -16,7 +16,7 @@ import beans.ResBean;
 import database.InsertRes;
 import database.QueryRes;
 
-import java.util.List;
+import java.util.*;
 
 public class ResServlet extends HttpServlet{
 
