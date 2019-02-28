@@ -60,7 +60,7 @@
                         document.write(h);
                     }
                 </script></td><td>${t.username}</td></tr>
-                <tr><td  colspan="4" class="title">タイトル：<a href="/ResServlet?threadid=${t.threadid}">${t.threadname}</a></td></tr>
+                <tr><td  colspan="4" class="title">タイトル：<a href="ResServ?threadid=${t.threadid}">${t.threadname}</a></td></tr>
                 <tr><td colspan="4" class="text">${t.threadtext}</td></tr>
     </c:forEach>
 
