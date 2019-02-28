@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="header">
-<h1>YUJE CHANNEL</h1>
+    <h1><a href="index.jsp">YUJE CHANNEL</a></h1>
 <ul class="li">
     <li><a href="ThreadServlet?category=1">恋愛</a></li>
     <li><a href="ThreadServlet?category=2">プログラミング</a></li>
@@ -24,10 +24,12 @@
 </div>
 
 <div class="table">
-<table>
     <c:forEach var="t" items="${tb}">
-        <tr><td>${t.threadid}</td><td>日付：${t.threaddate}</td><td>カテゴリ
-                <script>
+        <li class="aaa">
+            <div class="threadname"><a href="ResServlet?threadid=${t.threadid}">${t.threadname}</a></div>
+            <p class="threadtext">${t.threadtext}</p>
+            <div class="card_detail">
+            <span class="category"><script>
                     var a ="恋愛";
                     var b ="プログラミング";
                     var c ="スポーツ";
@@ -59,12 +61,14 @@
                     else if(${t.category} == 8){
                         document.write(h);
                     }
-                </script></td><td>${t.username}</td></tr>
-                <tr><td  colspan="4" class="title">タイトル：<a href="ResServlet?threadid=${t.threadid}">${t.threadname}</a></td></tr>
-                <tr><td colspan="4" class="text">${t.threadtext}</td></tr>
+                </script></span>
+                <span class="username">${t.username}</span>
+                <!--             <span class="res_num res_balloon" title="レス数"></span> -->
+                <!-- <span class="hit_num" title="HIT数">371HIT</span> -->
+                <time class="threaddate">${t.threaddate}</time>
+            </div>
+        </li>
     </c:forEach>
-
-</table>
 </div>
 <a href="CreateThread.html" class="btn-circle-flat">スレッドを作成</a>
 <p><a href="CreateThread.html">yuje</a></p>
