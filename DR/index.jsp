@@ -24,7 +24,7 @@
 </div>
 
 <div class="table">
-<table border="1">
+<table>
     <c:forEach var="t" items="${tb}">
         <tr><td>${t.threadid}</td><td>${t.threaddate}</td><td>
                 <script>
@@ -56,7 +56,7 @@
                     else if(${t.category} == 7){
                         document.write(g);
                     }
-                    else if(${t.category} == 8){
+                    els	e if(${t.category} == 8){
                         document.write(h);
                     }
                 </script></td><td>${t.username}</td></tr>
