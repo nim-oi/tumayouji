@@ -15,7 +15,7 @@ import beans.ResBean;
 public class QueryRes{
 
 	
-	public static List<ResBean> getQueryList(int currentThread){
+	public static List<ResBean> getQueryList(String currentThread){
 		
 		List<ResBean> resList = new ArrayList<ResBean>();
 	
@@ -54,7 +54,10 @@ public class QueryRes{
                 rb.setResdate(resdate);//•Ï‚í‚é•”•ª
                 rb.setResnumber(resnumber);//•Ï‚í‚é•”•ª
 				rb.setThreadid(threadid);
-				
+
+				System.out.println(threadid);
+				System.out.println(resnumber);
+
 				resList.add(rb);
 				
 			}

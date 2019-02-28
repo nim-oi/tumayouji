@@ -28,7 +28,7 @@ public class ResServlet extends HttpServlet{
 
         String resname = req.getParameter("resname");
         String restext = req.getParameter("restext");
-        int threadid= Integer.parseInt(req.getParameter("threadid"));
+        String threadid= req.getParameter("threadid");
         //データベースに書き込むクラスメソッド
         InsertRes.insertResTable(resname,restext,threadid);
 
@@ -53,9 +53,9 @@ public class ResServlet extends HttpServlet{
 //
         req.setCharacterEncoding("windows-31J");
 //
-        int currentThread= Integer.parseInt(req.getParameter("threadid"));
+        String threadid= req.getParameter("threadid");
         //データベースからリストをもらいたい
-        List<ResBean> rlist = getList(currentThread);
+        List<ResBean> rlist = getList(threadid);
         //jspで受け取る変数の名前、ここではusersにplistをset
         req.setAttribute("rb",rlist);
         //転送先のJSPを指定
@@ -64,7 +64,7 @@ public class ResServlet extends HttpServlet{
         dispatcher.forward(req,res);
 
     }
-    public List<ResBean> getList(int currentThread){
+    public List<ResBean> getList(String currentThread){
 
         List<ResBean> rlist=QueryRes.getQueryList(currentThread);
 

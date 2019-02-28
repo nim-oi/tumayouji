@@ -10,7 +10,7 @@ import beans.ResBean;
 public class InsertRes{
 	
 	
-	public static int insertResTable(String resname,String restext,int threadid){
+	public static int insertResTable(String resname,String restext,String threadid){
 		int count = 0; 
 		try{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -28,7 +28,7 @@ public class InsertRes{
 			
 			//SQL????????i?[????
 			String sql="insert into res_table(res_name,res_text,thread_id,res_number,res_date) values('"+resname+"','"+restext+"',"+threadid+",(select max(res_number) from res_table where thread_id="+threadid+")+1,sysdate)";
-			
+			System.out.println(sql);
 			//Statement?C???^?[?t?F?C?X??????????N???X??
 			//?C???X?^???X???èÔ????
 			Statement st=cn.createStatement();
