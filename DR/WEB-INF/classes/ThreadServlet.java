@@ -54,10 +54,10 @@ public class ThreadServlet extends HttpServlet{
 
         req.setCharacterEncoding("Windows-31J");
 
-//        String currentCategory=req.getParameter("category");
+        String currentCategory=req.getParameter("category");
 
 
-        List<ThreadBean> db=getList();
+        List<ThreadBean> db=getList(currentCategory);
 
         req.setAttribute("tb", db);
 
@@ -68,6 +68,11 @@ public class ThreadServlet extends HttpServlet{
 
     public List<ThreadBean> getList(){
         List<ThreadBean> db = QueryThread.getQueryList();
+
+        return db;
+    }
+    public List<ThreadBean> getList(String currentCategory){
+        List<ThreadBean> db = QueryThread.getQueryList(currentCategory);
 
         return db;
     }
