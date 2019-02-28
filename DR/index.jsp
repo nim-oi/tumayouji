@@ -26,7 +26,7 @@
 <div class="table">
 <table>
     <c:forEach var="t" items="${tb}">
-        <tr><td>${t.threadid}</td><td>${t.threaddate}</td><td>
+        <tr><td>${t.threadid}</td><td>日付：${t.threaddate}</td><td>カテゴリ
                 <script>
                     var a ="恋愛";
                     var b ="プログラミング";
