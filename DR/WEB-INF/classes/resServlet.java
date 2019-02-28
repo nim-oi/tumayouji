@@ -55,6 +55,9 @@ public class ResServlet extends HttpServlet{
         req.setCharacterEncoding("windows-31J");
 //
         String threadid= req.getParameter("threadid");
+        if(threadid==null){
+            throw new ServletException("このページは表示できません");
+        }
         //データベースからリストをもらいたい
         List<ResBean> rlist = getList(threadid);
         //jspで受け取る変数の名前、ここではusersにplistをset
