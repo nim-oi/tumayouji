@@ -61,7 +61,7 @@ public class QueryThread{
 				tb.setUsername(username);
 				tb.setThreadtext(threadtext);
 				tb.setThreadname(threadname);
-				threaddate();
+				threaddate.substring(0,19);
 				tb.setThreaddate(threaddate);
 				tb.setThreadid(threadid);
 				System.out.println(username);
@@ -127,6 +127,7 @@ public class QueryThread{
 				tb.setUsername(username);
 				tb.setThreadtext(threadtext);
 				tb.setThreadname(threadname);
+				threaddate.substring(0,19);
 				tb.setThreaddate(threaddate);
 				tb.setThreadid(threadid);
 				System.out.println(username);

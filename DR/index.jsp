@@ -56,7 +56,7 @@
                     else if(${t.category} == 7){
                         document.write(g);
                     }
-                    els	e if(${t.category} == 8){
+                    else if(${t.category} == 8){
                         document.write(h);
                     }
                 </script></td><td>${t.username}</td></tr>
