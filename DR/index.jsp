@@ -5,10 +5,12 @@
 <html>
 <head>
     <title>top画面</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
-<%! String category; %>
-<ul>
+<div class="header">
+<h1>YUJE CHANNEL</h1>
+<ul class="li">
     <li><a href="/ServletThread?category=1">恋愛</a></li>
     <li><a href="/ServletThread?category=2">プログラミング</a></li>
     <li><a href="/ServletThread?category=3">スポーツ</a></li>
@@ -18,10 +20,12 @@
     <li><a href="/ServletThread?category=7">ニュース</a></li>
     <li><a href="/ServletThread?category=8">その他</a></li>
 </ul>
+<hr>
+</div>
 
-
+<div class="table">
 <table border="1">
-    <tr><th>番号</th><th>スレッドタイトル</th><th>日付</th><th>カテゴリー</th><th>ユーザー名</th><th>スレッド内容</th></tr>
+    <tr><th>番号</th><th>スレッドタイトル</th><th>日付</th><th>カテゴリー</th><th>ユーザー名</th></tr>
     <c:forEach var="t" items="${tb}">
         <tr><td>${t.threadid}</td><td><a href="/ResServlet?threadid=${t.threadid}">${t.threadname}</a></td><td>${t.threaddate}</td><td>
                 <script>
@@ -56,11 +60,12 @@
                     else if(${t.category} == 8){
                         document.write(h);
                     }
-                </script>
-                </td><td>${t.username}</td><td>${t.threadtext}</td></tr>
+                </script></td><td>${t.username}</td></tr>
+                <tr><td>${t.threadtext}</td></tr>
     </c:forEach>
 
 </table>
+</div>
 <p><a href="CreateThread.html">yuje</a></p>
 </body>
 </html>
