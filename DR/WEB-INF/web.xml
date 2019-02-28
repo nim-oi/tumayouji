@@ -39,7 +39,7 @@
 
     <servlet-mapping>
     <servlet-name>ResServlet</servlet-name>
-    <url-pattern>/ResServ</url-pattern>
+    <url-pattern>/ResServlet</url-pattern>
 </servlet-mapping>
 
 
