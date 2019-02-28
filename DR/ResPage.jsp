@@ -15,9 +15,10 @@
         </c:forEach>
     </table>
     <form method="post" action="ResServlet">
+        <input type="hidden" name="threadid" value="${threadid}">
         ìäçeé“ñº<input type="text" name = "res_name" placeholder="ìΩñº">
         ìäçeì‡óe<textarea name='res_text' cols='100' rows='10' placeholder='Ç±Ç±Ç…ì¸óÕ' required></textarea><br>
-        <input type='submit' value="ëóêM">
+        <input type='submit' value="ëóêM" >
     </form>
     </body>
 </html>

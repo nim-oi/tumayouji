@@ -27,7 +27,7 @@ public class InsertRes{
 			System.out.println("Ú‘±Š®—¹");
 			
 			//SQL????????i?[????
-			String sql="insert into res_table(res_name,res_text,thread_id,res_number,res_date) values('"+resname+"','"+restext+"',"+threadid+",(select max(res_number) from res_table where thread_id="+threadid+")+1,sysdate)";
+			String sql="insert into res_table(res_name,res_text,thread_id,res_number,res_date,res_id) values('"+resname+"','"+restext+"',"+threadid+",(select max(res_number) from res_table where thread_id="+threadid+")+1,sysdate,s_res_id.nextval)";
 			System.out.println(sql);
 			//Statement?C???^?[?t?F?C?X??????????N???X??
 			//?C???X?^???X???ï????

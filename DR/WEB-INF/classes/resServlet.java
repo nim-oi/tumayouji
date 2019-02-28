@@ -39,6 +39,7 @@ public class ResServlet extends HttpServlet{
         //パラメータをJSPに転送したい。
 
         //jspで受け取る変数の名前ここではusersにplistをset
+        req.setAttribute("thread_id",threadid);
         req.setAttribute("rb",rlist);
 
 
@@ -57,6 +58,7 @@ public class ResServlet extends HttpServlet{
         //データベースからリストをもらいたい
         List<ResBean> rlist = getList(threadid);
         //jspで受け取る変数の名前、ここではusersにplistをset
+        req.setAttribute("thread_id",threadid);
         req.setAttribute("rb",rlist);
         //転送先のJSPを指定
         RequestDispatcher dispatcher =req.getRequestDispatcher("/ResPage");

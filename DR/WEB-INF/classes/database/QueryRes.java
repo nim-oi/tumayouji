@@ -30,7 +30,7 @@ public class QueryRes{
 			System.out.println("接続完了");
 			
 			//select文、変わる部分
-			String sql="select res_text,res_name,res_date,res_number,thread_id from res_table where thread_id="+currentThread;
+			String sql="select res_text,res_name,res_date,res_number,thread_id from res_table where thread_id="+currentThread+"";
 			System.out.println(sql);
 			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st=cn.createStatement();
