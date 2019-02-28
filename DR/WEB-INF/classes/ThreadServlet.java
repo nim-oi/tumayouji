@@ -55,10 +55,13 @@ public class ThreadServlet extends HttpServlet{
         req.setCharacterEncoding("Windows-31J");
 
         String currentCategory=req.getParameter("category");
+        List<ThreadBean> db;
 
-
-        List<ThreadBean> db=getList(currentCategory);
-
+        if(currentCategory==null){
+            db=getList();
+        }else{
+            db=getList(currentCategory);
+        }
         req.setAttribute("tb", db);
 
         RequestDispatcher dispatcher=req.getRequestDispatcher("/index");//????????????
