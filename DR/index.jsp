@@ -11,14 +11,14 @@
 <div class="header">
 <h1>YUJE CHANNEL</h1>
 <ul class="li">
-    <li><a href="/ServletThread?category=1">恋愛</a></li>
-    <li><a href="/ServletThread?category=2">プログラミング</a></li>
-    <li><a href="/ServletThread?category=3">スポーツ</a></li>
-    <li><a href="/ServletThread?category=4">ゲーム</a></li>
-    <li><a href="/ServletThread?category=5">学校</a></li>
-    <li><a href="/ServletThread?category=6">アニメ</a></li>
-    <li><a href="/ServletThread?category=7">ニュース</a></li>
-    <li><a href="/ServletThread?category=8">その他</a></li>
+    <li><a href="/ThreadServlet?category=1">恋愛</a></li>
+    <li><a href="/ThreadServlet?category=2">プログラミング</a></li>
+    <li><a href="/ThreadServlet?category=3">スポーツ</a></li>
+    <li><a href="/ThreadServlet?category=4">ゲーム</a></li>
+    <li><a href="/ThreadServlet?category=5">学校</a></li>
+    <li><a href="/ThreadServlet?category=6">アニメ</a></li>
+    <li><a href="/ThreadServlet?category=7">ニュース</a></li>
+    <li><a href="/ThreadServlet?category=8">その他</a></li>
 </ul>
 <hr>
 </div>
@@ -60,8 +60,8 @@
                         document.write(h);
                     }
                 </script></td><td>${t.username}</td></tr>
-                <tr><td  colspan="4"><a href="/ResServlet?threadid=${t.threadid}">タイトル${t.threadname}</a></td></tr>
-                <tr><td colspan="4">${t.threadtext}</td></tr>
+                <tr><td  colspan="4" class="title">タイトル：<a href="/ResServlet?threadid=${t.threadid}">${t.threadname}</a></td></tr>
+                <tr><td colspan="4" class="text">${t.threadtext}</td></tr>
     </c:forEach>
 
 </table>
