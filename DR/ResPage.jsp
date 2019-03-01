@@ -25,7 +25,7 @@
                 <li><a href="ThreadServlet?category=8">ÇªÇÃëº</a></li>
             </ul>
             <hr>
-        </div>
+    </div>
     <div class="table">
         
             
@@ -71,6 +71,8 @@
         <!-- <span class="hit_num" title="HITêî">371HIT</span> -->
         <time class="threaddate">ì˙ït:${tb.threaddate}</time>
         </div>
+    </a>
+    </div>
 
         
             
@@ -82,10 +84,10 @@
                         <p class="restext">${r.restext}</p>
                     </li>
                 </c:forEach>
-            </div>
+        </div>
     <div class="resbox">
     <form method="post" action="ResServlet" class="res">
-        <input type="hidden" name="threadid" value="${thread_id}">
+        <input type="hidden" name="threadid" value="${tb.threadid}">
         ìäçeé“ñº<input type="text" name = "resname" placeholder="ìΩñº" class="resnamebox"><br>
         ìäçeì‡óe<br>
         <textarea class="restexbox" name='restext' cols='50' rows='10' placeholder='Ç±Ç±Ç…ì¸óÕ' required></textarea><br>
