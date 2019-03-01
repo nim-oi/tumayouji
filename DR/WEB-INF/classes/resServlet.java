@@ -58,7 +58,7 @@ public class ResServlet extends HttpServlet{
         //jspで受け取る変数の名前ここではusersにplistをset
         req.setAttribute("tb",tb);
         req.setAttribute("rb",rlist);
-
+        
 
         //転送先のJSPを指定
         RequestDispatcher dispatcher =req.getRequestDispatcher("/ResPage");
@@ -71,18 +71,20 @@ public class ResServlet extends HttpServlet{
 //
         req.setCharacterEncoding("windows-31J");
 //
-        String threadid= req.getParameter("threadid");
-        if(threadid==null||threadid.isEmpty()){
+        String currentthread= req.getParameter("threadid");
+        System.out.println(currentthread);
+        if(currentthread==null||currentthread.isEmpty()){
             throw new ServletException("このページは表示できません");
         }
         //データベースからリストをもらいたい
-        List<ResBean> rlist = getList(threadid);
-        ThreadBean tb=QueryThread.getQueryCurrentThread(threadid);
+        List<ResBean> rlist = getList(currentthread);
+        ThreadBean tb=QueryThread.getQueryCurrentThread(currentthread);
         
         
         //jspで受け取る変数の名前、ここではusersにplistをset
         req.setAttribute("tb",tb);
         req.setAttribute("rb",rlist);
+       
         //転送先のJSPを指定
         RequestDispatcher dispatcher =req.getRequestDispatcher("/ResPage");
         //JSPに転送

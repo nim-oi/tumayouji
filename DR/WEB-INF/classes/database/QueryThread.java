@@ -174,10 +174,10 @@ public class QueryThread{
 			System.out.println("接続完了");
 			
 			//select文
-			String sql="select thread_name, thread_date, thread_id,thread_text,user_name,category from threadtable where thread_id = "+CurrentThread+" order by thread_id desc";
+			String sql="select thread_name, thread_date, thread_id,thread_text,user_name,category from threadtable where thread_id = "+CurrentThread;
 			System.out.println(sql);
 			//Statementインターフェイスを実装するクラスをインスタンス化する
-			// Statement st=cn.createStatement();
+			Statement st=cn.createStatement();
 
 			//select文を実行し
 			//ResultSetインターフェイスを実装したクラスの
@@ -185,24 +185,29 @@ public class QueryThread{
 			ResultSet rs=st.executeQuery(sql);
 
 			
-			
-			
-			String threadname = rs.getString(1);	//1列目のデータを取得
-			String threaddate = rs.getString(2);	//2列目のデータを取得
-			String threadid = rs.getString(3);		//3列目のデータを取得
-			String threadtext = rs.getString(4);	//4列目のデータを取得
-			String username = rs.getString(5);		//5列目のデータを取得
-			String category = rs.getString(6);		//6列目のデータを取得
-			tb.setCategory(category);
-			tb.setUsername(username);
-		
-			tb.setThreadtext(threadtext);
-			tb.setThreadname(threadname);
-			threaddate=threaddate.substring(0,16);
-			tb.setThreaddate(threaddate);
-			tb.setThreadid(threadid);
-			System.out.println(username);
-			System.out.println(category);
+			while(rs.next()){
+				
+				
+				String threadname = rs.getString(1);	//1列目のデータを取得
+				String threaddate = rs.getString(2);	//2列目のデータを取得
+				String threadid = rs.getString(3);		//3列目のデータを取得
+				String threadtext = rs.getString(4);	//4列目のデータを取得
+				String username = rs.getString(5);		//5列目のデータを取得
+				String category = rs.getString(6);		//6列目のデータを取得
+				tb.setCategory(category);
+				tb.setUsername(username);
+				tb.setThreadtext(threadtext);
+				tb.setThreadname(threadname);
+				threaddate=threaddate.substring(0,16);
+				tb.setThreaddate(threaddate);
+				tb.setThreadid(threadid);
+				System.out.println(username);
+				System.out.println(category);
+				
+				
+				//System.out.println("username"+"\t"+"password"); //確認表示
+				//System.out.println(name+"\t"+pass);				//確認その２
+			}
 			
 				
 				
