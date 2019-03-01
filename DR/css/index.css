@@ -6,19 +6,21 @@ body{
 	background-color:#FFFFF0;
 }
 .header{
-		width:100%;
-		position: fixed;
+	width:100%;
+	position: fixed;
 }
-
-.header h1{
-	font-family:Monotype Corsiva;
-	text-align:center;
-	font-size:50px;
+.headerr{
 	background-color:dodgerblue;
 }
 
+.headerr h1{
+	font-family:Monotype Corsiva;
+	text-align:center;
+	font-size:50px;
+}
+
 .header h1 a{
-	 text-decoration: none;
+	text-decoration: none;
 	color:white;
 }
 
@@ -38,11 +40,11 @@ body{
 
 tb{
 	border-collapse: collapse;
-    border:1px solid #333;
+	border:1px solid #333;
 }
 tr{
 	border-collapse: collapse;
-    border:1px solid #333;
+	border:1px solid #333;
 }
 .table{
 	padding-top:110px;
@@ -135,4 +137,9 @@ text{
 	margin: 0px auto;
 }
 
+.search{
+	position:absolute;
+	bottom: 50px;
+	right: 10px;
 
+}

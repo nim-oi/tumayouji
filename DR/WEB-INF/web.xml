@@ -68,4 +68,16 @@
         <exception-type>javax.servlet.ServletException</exception-type>
         <location>/ResServletError.jsp</location>
     </error-page>
+
+
+    <servlet>
+        <servlet-name>SearchSevlet</servlet-name>
+        <servlet-class>SearchSevlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SearchSevlet</servlet-name>
+        <url-pattern>/SearchSevlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>

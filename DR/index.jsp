@@ -9,7 +9,13 @@
 </head>
 <body>
 <div class="header">
+    <div class="headerr">
     <h1><a href="ThreadServlet">YUJE CHANNEL</a></h1>
+    <form method="post" action="SearchSevlet" class="search">
+        <input type="text" name="ss" placeholder="フリーワードを入力">
+        <input type="submit" value="検索">
+    </form>
+    </div>
 <ul class="li">
     <li><a href="ThreadServlet?category=1">恋愛</a></li>
     <li><a href="ThreadServlet?category=2">プログラミング</a></li>
