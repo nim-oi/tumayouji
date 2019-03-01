@@ -8,7 +8,10 @@
 </head>
 <body>
 <div class="header">
-    <h1>YUJE CHANNEL</h1>
+    <div class="headerr">
+        <h1><a href="ThreadServlet">YUJE CHANNEL</a></h1>
+
+    </div>
     <ul class="li">
         <li><a href="ThreadServlet?category=1">恋愛</a></li>
         <li><a href="ThreadServlet?category=2">プログラミング</a></li>

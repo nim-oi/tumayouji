@@ -8,6 +8,7 @@ body{
 .header{
 	width:100%;
 	position: fixed;
+	z-index:999;
 }
 .headerr{
 	background-color:dodgerblue;
@@ -78,6 +79,7 @@ tr{
 	font-size:20px;
 }
 .threadtext{
+	word-wrap:break-word;
 	padding-left: 10px;
 	font-size:13px;
 	color: #999999;
@@ -154,6 +156,7 @@ text{
 	padding-left: 10px;
 	font-size:12px;
 	color: black;
+
 }
 
 .bbb{
@@ -167,4 +170,17 @@ text{
 	list-style: none;
 	border: 1px solid #999999;
 	margin:  5px auto;
+}
+
+.threaddeisplay{
+	background-color: white;
+	margin:  5px auto;
+	width: 50%;
+	border: 1px solid #999999;
+	position:relative;
+	top:100px;
+
+}
+.threaddeisplay .threadtext{
+	color: #000;
 }

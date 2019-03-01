@@ -26,11 +26,11 @@
             </ul>
             <hr>
     </div>
-    <div class="table">
-        
-            
-        <a href="ResServlet?threadid=${tb.threadid}">
-        <div class="threadname">${tb.threadname}</div>
+    <div class="threaddeisplay">
+        <div class="threadname">${tb.threadname}
+            <span class="username">作成者:${tb.username}</span>
+            <time class="threaddate">日付:${tb.threaddate}</time>
+        </div>
         <p class="threadtext">${tb.threadtext}</p>
         <div class="card_detail">
         <span class="category"><script>
@@ -66,21 +66,13 @@
         document.write(h);
         }
         </script></span>
-        <span class="username">作成者:${tb.username}</span>
-        <!--             <span class="res_num res_balloon" title="レス数"></span> -->
-        <!-- <span class="hit_num" title="HIT数">371HIT</span> -->
-        <time class="threaddate">日付:${tb.threaddate}</time>
         </div>
-    </a>
     </div>
 
-        
-            
-        
         <div class="table">
                 <c:forEach var="r" items="${rb}">
                     <li class="bbb">
-                        <div class="username">作成者:${r.resname}</div>
+                        <div class="username">No.${r.resnumber}作成者:${r.resname}日付:${r.resdate}</div>
                         <p class="restext">${r.restext}</p>
                     </li>
                 </c:forEach>
@@ -90,7 +82,7 @@
         <input type="hidden" name="threadid" value="${tb.threadid}">
         投稿者名<input type="text" name = "resname" placeholder="匿名" class="resnamebox"><br>
         投稿内容<br>
-        <textarea class="restexbox" name='restext' cols='50' rows='10' placeholder='ここに入力' required></textarea><br>
+            <textarea class="restexbox" name='restext' cols='50' rows='10' placeholder='ここに入力' required></textarea><br>
         <input type='submit' value="送信" >
     </form>
     </div>
