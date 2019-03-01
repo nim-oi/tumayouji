@@ -5,7 +5,7 @@
 
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/ResPage.css">
         <title>Threadres</title>
     </head>
     <body>
@@ -77,12 +77,15 @@
                     </li>
                 </c:forEach>
         </div>
+    <br>
+    <br>
+    <br>
     <div class="resbox">
     <form method="post" action="ResServlet" class="res">
         <input type="hidden" name="threadid" value="${tb.threadid}">
-        ìäçeé“ñº<input type="text" name = "resname" placeholder="ìΩñº" class="resnamebox"><br>
-        ìäçeì‡óe<br>
-            <textarea class="restexbox" name='restext' cols='50' rows='10' placeholder='Ç±Ç±Ç…ì¸óÕ' required></textarea><br>
+        ìäçeé“ñº<input type="text" name = "resname" placeholder="ìΩñº" class="resnamebox">
+        ìäçeì‡óe
+            <textarea class="restexbox" name='restext' cols='50' rows='1' placeholder='Ç±Ç±Ç…ì¸óÕ' required></textarea>
         <input type='submit' value="ëóêM" >
     </form>
     </div>
