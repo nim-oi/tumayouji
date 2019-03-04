@@ -1,0 +1,49 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+body{
+    background-color:#FFFFF0;
+}
+.headerr{
+    background-color:dodgerblue;
+}
+
+.headerr h1{
+    font-family:Monotype Corsiva;
+    text-align:center;
+    font-size:50px;
+}
+
+.header h1 a{
+    text-decoration: none;
+    color:white;
+}
+.login{
+    padding-top: 100px;
+}
+.login h1{
+    text-align: center;
+}
+.logintext{
+     text-align: center;
+}
+.logintext input{
+    margin-bottom: 20px;
+}
+.newR{
+    text-align: center;
+    padding-top: 50px;
+}
+
+.new {
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: dodgerblue;/*色*/
+    border: solid 1px #0f9ada;/*線色*/
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}

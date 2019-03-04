@@ -1,0 +1,186 @@
+*{
+	padding:0px;
+	margin:0px;
+}
+body{
+	background-color:#FFFFF0;
+}
+.header{
+	width:100%;
+	position: fixed;
+	z-index:999;
+}
+.headerr{
+	background-color:dodgerblue;
+}
+
+.headerr h1{
+	font-family:Monotype Corsiva;
+	text-align:center;
+	font-size:50px;
+}
+
+.header h1 a{
+	text-decoration: none;
+	color:white;
+}
+
+
+.li{
+	background-color: white;
+	padding-top:5px;
+	display:flex;
+	list-style: none;
+	justify-content: space-around;
+	box-shadow: 0px 2px 0px 0px gray;
+}
+
+.li a{
+	text-decoration: none;
+	color: #000;
+}
+
+tb{
+	border-collapse: collapse;
+	border:1px solid #333;
+}
+tr{
+	border-collapse: collapse;
+	border:1px solid #333;
+}
+.table{
+	margin-top: 0px;
+	padding-top:110px;
+}
+.Thread{
+	margin:  0 auto;
+}
+
+
+
+.aaa {
+	background-color: white;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	width:45%;
+	list-style: none;
+	border: 1px solid #999999;
+	margin:  5px auto;
+}
+.table a{
+	text-decoration: none;
+}
+.threadname{
+	padding-left: 10px;
+	color: black;
+}
+.threadname{
+	padding-left: 10px;
+	font-size:20px;
+}
+.threadtext{
+	word-wrap:break-word;
+	padding-left: 10px;
+	font-size:13px;
+	color: #999999;
+}
+.card_detail{
+	padding-left: 10px;
+}
+.username{
+	font-size: 10px;
+	color:black;
+
+}
+.threaddate{
+	font-size: 10px;
+	color: black;
+
+}
+.category{
+	font-size: 10px;
+	color: black;
+}
+
+.title{
+	font-size:20px;
+	padding:10px 5px
+}
+text{
+	font-size:10px;
+	padding:20px 10px
+}
+.btn-circle-flat {
+	position: fixed;
+	top:80%;
+	left:90%;
+	display: inline-block;
+	text-decoration: none;
+	background: #3399FF;
+	color: #FFF;
+	width: 120px;
+	height: 120px;
+	line-height: 120px;
+	border-radius: 50%;
+	text-align: center;
+	vertical-align: middle;
+	overflow: hidden;
+	transition: .4s;
+}
+
+.error{
+	width:100%;
+	text-align: center;
+	padding-top: 27%;
+}
+.search{
+	position:absolute;
+	bottom: 50px;
+	right: 10px;
+
+}
+.bbb{
+	background-color: white;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	width:45%;
+	list-style: none;
+	border: 1px solid #999999;
+	margin:  5px auto;
+}
+
+.threaddeisplay{
+	background-color: white;
+	margin:  5px auto;
+	width: 50%;
+	border: 1px solid #999999;
+	position:relative;
+	top:100px;
+
+}
+.threaddeisplay .threadtext{
+	color: #000;
+}
+
+.restext{
+	padding-left: 10px;
+	font-size:12px;
+	color: black;
+
+}
+.resbox{
+	justify-content: space-around;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 50px;
+	background-color: white;
+	border: 1px solid #999999;
+	text-align: center;
+}
+.restexbox{
+}

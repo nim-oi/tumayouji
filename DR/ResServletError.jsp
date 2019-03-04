@@ -4,7 +4,7 @@
 <html>
 <head>
     <title>エラーページ</title>
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 <div class="header">

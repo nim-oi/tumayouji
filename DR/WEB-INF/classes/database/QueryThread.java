@@ -37,7 +37,7 @@ public class QueryThread{
 			System.out.println("接続完了");
 			
 			//select文
-			String sql="select thread_name, thread_date, thread_id,thread_text,user_name,category from threadtable order by thread_id desc";
+			String sql="select thread_name, thread_date, thread_id,thread_text,user_name,category from threadtable where thread_flag=0 order by thread_id desc";
 			System.out.println(sql);
 			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st=cn.createStatement();
@@ -107,7 +107,7 @@ public class QueryThread{
 			System.out.println("接続完了");
 			
 			//select文
-			String sql="select thread_name, thread_date, thread_id,thread_text,user_name,category from threadtable where category = "+currentCategory+" order by thread_id desc";
+			String sql="select thread_name, thread_date, thread_id,thread_text,user_name,category from threadtable where category = "+currentCategory+" and thread_flag=0 order by thread_id desc";
 			System.out.println(sql);
 			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st=cn.createStatement();

@@ -1,0 +1,96 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+body{
+    background-color:#FFFFF0;
+}
+.header{
+    width:100%;
+    position: fixed;
+    z-index:999;
+    background-color:dodgerblue;
+}
+.headerr{
+}
+
+.headerr h1{
+    font-family:Monotype Corsiva;
+    text-align:center;
+    font-size:50px;
+}
+
+.header h1 a{
+    text-decoration: none;
+    color:white;
+}
+
+.header p {
+    float: right;
+    margin-top: -41px;
+    margin-right:30px;
+}
+
+.header p a{
+    text-decoration: none;
+    color:black;
+}
+.Registration{
+    text-align: center;
+    padding-top: 100px;
+}
+
+.aaa {
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width:45%;
+    list-style: none;
+    border: 1px solid #999999;
+    margin:  5px auto;
+}
+.table{
+    margin-top: 0px;
+    padding-top:10px;
+}
+
+.table a{
+    text-decoration: none;
+}
+.threadname{
+    padding-left: 10px;
+    color: black;
+}
+.threadname{
+    padding-left: 10px;
+    font-size:20px;
+}
+.threadtext{
+    word-wrap:break-word;
+    padding-left: 10px;
+    font-size:13px;
+    color: #999999;
+}
+.card_detail{
+    padding-left: 10px;
+}
+.username{
+    font-size: 10px;
+    color:black;
+
+}
+.threaddate{
+    font-size: 10px;
+    color: black;
+
+}
+.category{
+    font-size: 10px;
+    color: black;
+}
+.delete{
+    float: right;
+    margin-right:20px;
+}

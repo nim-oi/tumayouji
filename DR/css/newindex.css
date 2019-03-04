@@ -109,23 +109,37 @@ body{
 
 
 
-.log{
-    float: right;
+.log {
+    text-decoration: none;
+    position: absolute;
+    right: 2%;
+    top: 20%;
+    color: black;
+    font-size: 12px;
+}
+.log1{
+    text-decoration: none;
+    position: absolute;
+    right: 2%;
+    top: 14%;
+    color: black;
+    font-size: 12px;
 }
 .search{
-    margin-top: 10px;
+    position: absolute;
+    right: 8%;
+    top: 17%;
 }
 .new{
     position: relative;
     left: 27.5%;
+    color: #000;
+}
+.new a{
+    color: #000;
 }
 
-
-/*.search{*/
-    /*position:relative;*/
-    /*margin-bottom:20px;*/
-/*}*/
-.ss{
+#ss{
     outline:0;
     height:50px;
     padding:0 10px;
@@ -136,7 +150,7 @@ body{
     border-radius:2px;
     background:#eee;
 }
-.ss{
+#ss{
     width:70px;
     height:50px;
     position:absolute;
@@ -149,7 +163,7 @@ body{
     font-size:16px;
     border:none;
 }
-.ss:hover{
+#ss:hover{
     background:#eee;
     color:#7fbfff;
 }

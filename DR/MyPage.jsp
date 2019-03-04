@@ -1,49 +1,25 @@
-<%@ page pageEncoding="windows-31j"
+<%@ page pageEncoding="windows-31J"
          contentType="text/html;charset=windows-31j" %>
-
 <%--JSTL 1.1.2 core タグライブラリ--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>yuje channel</title>
-    <%--<link rel="stylesheet" type="text/css" href="css/index.css">--%>
-    <link rel="stylesheet" type="text/css" href="css/newindex.css">
-    <%--<link rel="stylesheet" type="text/css" href="css/style.css">--%>
-
+    <link rel="stylesheet" type="text/css" href="css/MyPage.css">
+    <title>login</title>
 </head>
 <body>
 <div class="header">
     <div class="headerr">
-    <h1><a href="ThreadServlet">YUJE CHANNEL</a></h1>
-    <form method="post" action="SearchSevlet" class="search">
-        <input type="text" name="ss" placeholder="スレッド検索">
-        <input type="submit" id="ss" value="検索">
-    </form>
-       <% if(session.getAttribute("user_name")==null){ %>
-            <a href="loginPage.jsp" class="log1">ログイン<br>新規登録</a>
-        <% }else{ %>
-
-        <a href="MyPageServlet?user_id=<%= session.getAttribute("user_id") %>" class="log">マイページ</a>
-        <% }%>
+        <h1><a href="ThreadServlet">YUJE CHANNEL</a></h1>
+        <p><a href="LogoutServlet">ログアウト</a></p>
     </div>
-<ul class="li">
-    <li><a href="ThreadServlet?category=1">恋愛</a></li>
-    <li><a href="ThreadServlet?category=2">プログラミング</a></li>
-    <li><a href="ThreadServlet?category=3">スポーツ</a></li>
-    <li><a href="ThreadServlet?category=4">ゲーム</a></li>
-    <li><a href="ThreadServlet?category=5">学校</a></li>
-    <li><a href="ThreadServlet?category=6">アニメ</a></li>
-    <li><a href="ThreadServlet?category=7">ニュース</a></li>
-    <li><a href="ThreadServlet?category=8">その他</a></li>
-</ul>
-<hr>
 </div>
 
+<h1 class="Registration">登録名：<%= session.getAttribute("user_name")%></h1>
 <div class="table">
-    <p class="new"><a href="ThreadServlet">新着順</a>  <a href="ThreadServletAsc">投稿順</a></p>
-    <c:forEach var="t" items="${tb}">
-            <li class="aaa">
-                <a href="ResServlet?threadid=${t.threadid}">
+    <c:forEach var="t" items="${mt}">
+    <li class="aaa">
+        <a href="ResServlet?threadid=${t.threadid}">
             <div class="threadname">${t.threadname}</div>
             <p class="threadtext">${t.threadtext}</p>
             <div class="card_detail">
@@ -82,13 +58,11 @@
                 </script></span>
                 <span class="username">作成者:${t.username}</span>
                 <time class="threaddate">日付:${t.threaddate}</time>
+                <a href="DeleteServlet?thread_id=${t.threadid}" class="delete">削除</a>
             </div>
-
-                </a>
-            </li>
+        </a>
+    </li>
     </c:forEach>
 </div>
-<a href="CreateThread.jsp" class="btn-circle-flat">スレッドを作成</a>
-
 </body>
 </html>

@@ -17,6 +17,7 @@ public class ThreadServlet extends HttpServlet{
         String category = req.getParameter("category");
         String username = req.getParameter("user_name");
         String threadtext = req.getParameter("thread_text");
+        String user_id = req.getParameter("user_id");
 
 
         threadtext = threadtext.replace("&", "&amp;");
@@ -26,11 +27,11 @@ public class ThreadServlet extends HttpServlet{
         threadtext = threadtext.replace("'", "&#39;");
 
         if (threadtext != null) {
-            //改行コードをHTMLの改行タグ（<br>）に変換
+            //???s?R?[?h??HTML????s?^?O?i<br>?j????
             threadtext = threadtext.replaceAll("\r\n", "<br>");
         }
 
-        InsertThread.thread_table(threadname,category,username,threadtext);
+        InsertThread.thread_table(threadname,category,username,threadtext,user_id);
 
 //        ThreadBean tb = new ThreadBean();
 //        tb.setThreadname(threadname);

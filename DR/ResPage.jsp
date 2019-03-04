@@ -72,22 +72,26 @@
         <div class="table">
                 <c:forEach var="r" items="${rb}">
                     <li class="bbb">
-                        <div class="username">No.${r.resnumber}ì¬Ò:${r.resname}“ú•t:${r.resdate}</div>
+                        <div class="username">  ì¬Ò:${r.resname}    “ú•t:${r.resdate}</div>
                         <p class="restext">${r.restext}</p>
                     </li>
                 </c:forEach>
         </div>
     <br>
     <br>
+    <br>  <br>
+    <br>  <br>
     <br>
-    <div class="resbox">
-    <form method="post" action="ResServlet" class="res">
-        <input type="hidden" name="threadid" value="${tb.threadid}">
-        “ŠeÒ–¼<input type="text" name = "resname" placeholder="“½–¼" class="resnamebox">
-        “Še“à—e
-            <textarea class="restexbox" name='restext' cols='50' rows='1' placeholder='‚±‚±‚É“ü—Í' required></textarea>
-        <input type='submit' value="‘—M" >
-    </form>
-    </div>
+    <br>
+    <br>
+        <div class="resbox">
+            <form method="post" action="ResServlet" class="res">
+                <input type="hidden" name="threadid" value="${tb.threadid}">
+                “ŠeÒ–¼<input type="text" name = "resname" placeholder="“½–¼" class="resnamebox">
+                “Še“à—e
+                    <textarea class="restexbox" name='restext' cols='50' rows='1' placeholder='‚±‚±‚É“ü—Í' required></textarea>
+                <input type='submit' value="‘—M" >
+            </form>
+        </div>
     </body>
 </html>

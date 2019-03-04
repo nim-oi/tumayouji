@@ -1,5 +1,5 @@
 <web-app>
-<!-- <servlet>
+    <servlet>
     <servlet-name>UserServ</servlet-name>
     <servlet-class>UserServlet</servlet-class>
     </servlet>
@@ -8,7 +8,6 @@
     <servlet-name>UserServ</servlet-name>
     <url-pattern>/UserS</url-pattern>
 </servlet-mapping>
- -->
    
 
 <servlet>
@@ -79,5 +78,141 @@
         <servlet-name>SearchSevlet</servlet-name>
         <url-pattern>/SearchSevlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserServlet</servlet-name>
+        <servlet-class>UserServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserServlet</servlet-name>
+        <url-pattern>/UserServlet</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>newUser</servlet-name>
+        <jsp-file>/newUser</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>newUser</servlet-name>
+        <url-pattern>/newUser</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MyPage</servlet-name>
+        <jsp-file>/MyPage.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MyPage</servlet-name>
+        <url-pattern>/MyPage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>loginPage</servlet-name>
+        <jsp-file>/loginPage.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>loginPage</servlet-name>
+        <url-pattern>/loginPage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MyPageServlet</servlet-name>
+        <servlet-class>MyPageServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MyPageServlet</servlet-name>
+        <url-pattern>/MyPageServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>loginPageServlet</servlet-name>
+        <servlet-class>loginPageServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>loginPageServlet</servlet-name>
+        <url-pattern>/loginPageServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>NoServlet</servlet-name>
+        <servlet-class>NoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>NoServlet</servlet-name>
+        <url-pattern>/NoServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>OutCheck</servlet-name>
+        <jsp-file>/OutCheck.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>OutCheck</servlet-name>
+        <url-pattern>/OutCheck</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>LogoutServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>Deletecheck</servlet-name>
+        <jsp-file>/Deletecheck.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Deletecheck</servlet-name>
+        <url-pattern>/Deletecheck</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteServlet</servlet-name>
+        <servlet-class>DeleteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteServlet</servlet-name>
+        <url-pattern>/DeleteServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>check</servlet-name>
+        <jsp-file>/check.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>check</servlet-name>
+        <url-pattern>/check</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ThreadServletAsc</servlet-name>
+        <servlet-class>ThreadServletAsc</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ThreadServletAsc</servlet-name>
+        <url-pattern>/ThreadServletAsc</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>

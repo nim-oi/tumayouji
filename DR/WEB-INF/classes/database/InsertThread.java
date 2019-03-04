@@ -6,7 +6,7 @@ import java.sql.Statement;
 
 public class InsertThread{
 
-    public static int thread_table(String threadname,String category,String username,String threadtext){
+    public static int thread_table(String threadname,String category,String username,String threadtext,String user_id){
         int count = 0;
         try{
             Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -17,7 +17,7 @@ public class InsertThread{
 
             System.out.println("Ú‘±Š®—¹");
 
-            String sql="insert into threadtable(thread_id,category,thread_name,user_name,thread_text) values(s_thread_id.nextval,'"+category+"','"+threadname+"','"+username+"','"+threadtext+"')";
+            String sql="insert into threadtable(thread_id,category,thread_name,user_name,thread_text,user_id) values(s_thread_id.nextval,'"+category+"','"+threadname+"','"+username+"','"+threadtext+"','"+user_id +"')";
             System.out.println(sql);
             Statement st=cn.createStatement();
 

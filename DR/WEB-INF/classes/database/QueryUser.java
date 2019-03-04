@@ -15,9 +15,9 @@ import java.util.ArrayList;
 public class QueryUser{
 
 	
-	public static List<UserBean> getQueryList(){
-		
-		List<UserBean> userList = new ArrayList<UserBean>();
+	public static String getQueryList(String un, String up){
+
+		String user_id = null;
 	
 	
 		try{
@@ -30,7 +30,7 @@ public class QueryUser{
 			System.out.println("接続完了");
 			
 			//select文、変わる部分
-			String sql="select user_name,user_pass,user_age,user_sex from user_table";
+			String sql="select user_id from user_table where user_name ='" +un+ "'and user_pass = '"+up+"'";
 
 			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st=cn.createStatement();
@@ -42,26 +42,12 @@ public class QueryUser{
 
 			//カーソルを一行だけスクロールし、データをフェッチする
 			while(rs.next()){
-				UserBean ublist = new UserBean();
-				
-                String user_id=rs.getString(1);
-                String user_name=rs.getString(2);
-                String user_pass=rs.getString(3);
-                int user_age=rs.getString(4);
-                int user_sex=rs.getString(5);//2列目のデータを取得、変わる部分
-                ublist.setUser_id(user_id);//変わる部分
-                ublist.setUser_name(user_name);//変わる部分
-                ublist.setUser_pass(user_pass);//変わる部分
-                ublist.setUser_age(user_age);//変わる部分
-                ublist.setUser_sex(user_sex);//変わる部分
-                
-				
-				
-				userList.add(ublist);
-				
+
+                user_id=rs.getString(1);
+
 			}
 
-			
+
 			//Oracleから切断する
 			cn.close();
 
@@ -75,7 +61,7 @@ public class QueryUser{
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		return userList;
+		return user_id;
 		
 	}
 }
