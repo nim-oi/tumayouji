@@ -87,7 +87,7 @@
         <div class="resbox">
             <form method="post" action="ResServlet" class="res">
                 <input type="hidden" name="threadid" value="${tb.threadid}">
-                ìäçeé“ñº<input type="text" name = "resname" placeholder="ìΩñº" class="resnamebox">
+                ìäçeé“ñº<input type="text" name = "resname" placeholder="ìΩñº" class="resnamebox" required>
                 ìäçeì‡óe
                     <textarea class="restexbox" name='restext' cols='50' rows='1' placeholder='Ç±Ç±Ç…ì¸óÕ' required></textarea>
                 <input type='submit' value="ëóêM" >

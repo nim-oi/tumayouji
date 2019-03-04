@@ -15,7 +15,7 @@
     <h1>ログイン画面</h1>
 <form action="loginPageServlet" method="post" class="logintext">
     <input type="text" name="name"  placeholder="ユーザー名" required><br>
-    <input type="text" name="pass"  placeholder="パスワード" required><br>
+    <input type="password" name="pass"  placeholder="パスワード" required><br>
     <input type="submit" value="ログイン" class="new"><br>
 </form>
 </div>
