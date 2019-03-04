@@ -101,7 +101,7 @@ text{
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
     width:45%;
-
+    height: 150px;
     list-style: none;
     border: 1px solid #999999;
     margin:  5px auto;
@@ -137,7 +137,7 @@ text{
 }
 .threaddeisplay{
     background-color: white;
-    margin:  5px auto;
+    /*margin:  5px auto;*/
     width: 50%;
     border: 1px solid #999999;
     position:relative;

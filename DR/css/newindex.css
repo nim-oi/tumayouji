@@ -138,32 +138,3 @@ body{
 .new a{
     color: #000;
 }
-
-#ss{
-    outline:0;
-    height:50px;
-    padding:0 10px;
-    position:absolute;
-    left:0;
-    top:0;
-    max-width:270px;
-    border-radius:2px;
-    background:#eee;
-}
-#ss{
-    width:70px;
-    height:50px;
-    position:absolute;
-    left:280px;
-    top:0;
-    border-radius:2px;
-    background:#7fbfff;
-    color:#fff;
-    font-weight:bold;
-    font-size:16px;
-    border:none;
-}
-#ss:hover{
-    background:#eee;
-    color:#7fbfff;
-}

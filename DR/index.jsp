@@ -17,7 +17,7 @@
     <h1><a href="ThreadServlet">YUJE CHANNEL</a></h1>
     <form method="post" action="SearchSevlet" class="search">
         <input type="text" name="ss" placeholder="スレッド検索">
-        <input type="submit" id="ss" value="検索">
+        <input type="submit" value="検索">
     </form>
        <% if(session.getAttribute("user_name")==null){ %>
             <a href="loginPage.jsp" class="log1">ログイン<br>新規登録</a>
@@ -89,6 +89,5 @@
     </c:forEach>
 </div>
 <a href="CreateThread.jsp" class="btn-circle-flat">スレッドを作成</a>
-
 </body>
 </html>
