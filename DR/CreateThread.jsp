@@ -44,7 +44,7 @@
     <%}else{%>
     <input type="hidden" name="user_id" value= <%= session.getAttribute("user_id")%>>
     <%}%>
-    投稿者名<input type='text' name='user_name' placeholder='匿名' required><hr><br>
+    投稿者名<input type='text' name='user_name' value="匿名" required><hr><br>
     投稿内容<br>
     <textarea name='thread_text' cols='70' rows='20' placeholder='ここに入力' class="text" required></textarea><br>
     <input type='submit' value="作成したスレッドを投稿する" class="Transmission">
